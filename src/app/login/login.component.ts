@@ -9,6 +9,7 @@ export class LoginComponent implements OnInit {
 
   emailid :String;
   password :String;
+  showForm:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,4 +17,9 @@ export class LoginComponent implements OnInit {
 login(){
   alert(this.emailid+" "+ this.password);
 }
+showRole(){
+  
+  
+}
+
 }
