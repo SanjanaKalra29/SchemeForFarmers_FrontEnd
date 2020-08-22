@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 
 
 @NgModule({
@@ -14,9 +15,11 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    FarmerregistrationComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     FormsModule
