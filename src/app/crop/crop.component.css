@@ -1,0 +1,51 @@
+body{    
+    padding-top: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.container1{
+   padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%; 
+    border:2px solid rgb(94, 255, 0);
+    height: 100%;
+    margin-bottom: 180px;
+}
+.button1{
+    margin-top: 10%;
+    text-align: center;
+}
+.input1{
+    margin-left: 20px;
+}
+.input2{
+   margin-left: 20px;
+    margin-top: 5%;
+}
+.t1{
+   margin-left: 50px;
+}
+.t2{
+   margin-left: 45px;
+}
+.t3{
+   margin-left: 27px;
+}
+.t4{
+   margin-left: 65px;
+}
+
+.request {
+ background-color:#99ff25;
+ color:black;
+ font-size: 20px;
+ padding: 10px 15px;
+ border: none;
+ cursor: pointer;
+ opacity: 0.9;
+}
+.request:hover {
+ opacity: 1;
+}

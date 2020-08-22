@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
+import { CropComponent } from './crop/crop.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FarmerregistrationComponent } from './farmerregistration/farmerregistra
     LoginComponent,
     NavbarComponent,
     FooterComponent,
-    FarmerregistrationComponent
+    FarmerregistrationComponent,
+    CropComponent
   ],
   imports: [
 
