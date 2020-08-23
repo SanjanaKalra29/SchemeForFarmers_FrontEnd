@@ -1,0 +1,136 @@
+
+.row{
+	margin:20px;
+    margin-top:50px;
+    margin-bottom:50px;
+	margin-right:100px;
+	margin-left:170px;
+	background-color: white;
+	border-style:solid;
+	border-color:#0080109e;
+	height:auto;
+    width:1000px;
+    padding-bottom: 30px;
+}
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  input{
+      border: 2px solid green;		
+  }
+  
+  button{
+      background-color:green;
+      color: white;
+      size:10px;
+      padding:10px;
+  }
+  
+  .container{
+      margin-left: 330px;
+  }
+  .container h1{
+      margin-left: 30px;
+  }
+  .f1{
+      margin-top: 5px;
+      margin-left: 95px;
+  }
+  .f2{
+      margin-top: 5px;
+      margin-left: 47px;
+  }
+  .f3{
+      margin-top: 5px;
+      margin-left: 110px;
+  }
+  .doc{
+      margin-left: 110px;
+  }
+  .a1{
+      margin-top: 5px;
+      margin-left: 70px;
+  
+  }
+  .a2{
+      margin-top: 5px;
+      margin-left: 125px;
+  }
+  .a3{
+      margin-top: 5px;
+      margin-left: 133px;
+  
+  }
+  .a4{
+      margin-top: 5px;
+      margin-left: 138px;
+  }
+  .l1{
+      margin-top: 5px;
+      margin-left: 126px;
+  
+  }
+  .l2{
+      margin-top: 5px;
+      margin-left: 97px;
+  
+  }
+  .l3{
+      margin-top: 5px;
+      margin-left: 137px;
+  
+  }
+  .b1{
+      margin-top: 5px;
+      margin-left: 30px;
+  }
+  .b2{
+      margin-top: 5px;
+      margin-left: 123px;
+  
+  }
+  .d1{
+      margin-top: 5px;
+      margin-left: 103px;
+  
+  
+  }
+  
+  .df1{
+      border: initial;
+      margin-left: 20px;
+  }
+  .df2{
+      border: initial;
+      margin-left: 20px;
+  }
+  .d2{
+      margin-top: 5px;
+      margin-left: 125px;
+      margin-bottom: 10px;
+  }
+  .pass1{
+      margin-top: 5px;
+      margin-left: 81px;
+  
+  }
+  .pass2{
+      margin-top: 5px;
+      margin-left: 15px;
+  
+  }
+  .button1{	
+      margin-left: 430px;
+  }
+  .button2{	
+      margin-left: 10px;
+  }
+  .show {display: block;}
+  
+  .error{
+      color: red;
+  }
+  
