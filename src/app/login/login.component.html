@@ -11,8 +11,7 @@
 	</form>
 	<div id="signup"> <a [routerLink]="'/farmerregistration'">Are you new here? </a> </div>
 
-				<input type="submit" value="Login" id="submit" >
-				</form>
+				<input type="submit" value="Login" id="submit">
 				<div id="signup"> <a [routerLink]="'/farmerregistration'" >Are you new here? </a> </div>
 
 				<div *ngIf = "myform.form.invalid">
@@ -22,8 +21,6 @@
 				<div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
 					Please enter password to login
 				</div>
-			</div>
-		</div>
 		<div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
 			Please enter password to login
 		</div>
