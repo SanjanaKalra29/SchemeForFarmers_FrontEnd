@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
 import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
+import { FarmerwelcomeComponent } from './farmerwelcome/FarmerWelcome.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component'
     FooterComponent,
     FarmerregistrationComponent,
     CropComponent,
-    BidderwelcomeComponent
+    BidderwelcomeComponent,
+    FarmerwelcomeComponent
   ],
   imports: [
 
