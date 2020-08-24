@@ -20,8 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     FarmerregistrationComponent,
-    CropComponent,
-    BidderwelcomeComponent
+    CropComponent
   ],
   imports: [
 
