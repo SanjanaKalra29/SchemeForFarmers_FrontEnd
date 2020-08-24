@@ -9,8 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
-import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
-import { FarmerwelcomeComponent } from './farmerwelcome/FarmerWelcome.component';
 
 
 @NgModule({
@@ -20,9 +18,7 @@ import { FarmerwelcomeComponent } from './farmerwelcome/FarmerWelcome.component'
     NavbarComponent,
     FooterComponent,
     FarmerregistrationComponent,
-    CropComponent,
-    BidderwelcomeComponent,
-    FarmerwelcomeComponent
+    CropComponent
   ],
   imports: [
 
