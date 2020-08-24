@@ -10,7 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
 import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
-import { FarmerwelcomeComponent } from './farmerwelcome/FarmerWelcome.component';
+import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.component';
+import { PlacerequestComponent } from './placerequest/placerequest.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FarmerwelcomeComponent } from './farmerwelcome/FarmerWelcome.component'
     FarmerregistrationComponent,
     CropComponent,
     BidderwelcomeComponent,
-    FarmerwelcomeComponent
+    FarmerWelcome2Component,
+    PlacerequestComponent
   ],
   imports: [
 
