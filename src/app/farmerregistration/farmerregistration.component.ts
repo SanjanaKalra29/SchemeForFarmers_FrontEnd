@@ -1,8 +1,9 @@
+import { Router } from '@angular/router';
 import { RegisterService } from './../register.service';
 
-import { Account,Land, Address,Document} from './registrationentity';
+import { Land, Address, Account, Document } from './registrationentity';
 import { NgForm } from '@angular/forms';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'farmerregistration',
@@ -10,11 +11,14 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./farmerregistration.component.css']
 })
 export class FarmerregistrationComponent {
+
   register: Register = new Register();
   land : Land = new Land();
   addres: Address = new Address();
 
   roles:string[] = ['Farmer','Bidder'];
+
+
   
 
   assignRole(roles:String){
@@ -28,29 +32,37 @@ export class FarmerregistrationComponent {
     }
     }
 
-  constructor(private service:RegisterService) { }
+  constructor(private service:RegisterService,private router: Router) { }
   process(){
-    alert(this.register.firstname);
-    alert(this.land.address);
-    alert(this.register.role);
-    alert(this.addres.state);
-    this.register.id=50;
-    
+    alert("Registeration Successfull")
+    if(this.register.role=='Bidder'){
+
+      this.router.navigate(['/app-login']);
+
+    }
   }
 
   @ViewChild(NgForm) form1: NgForm;
   reset(){
     this.form1.resetForm();
   }
+
   registerUser(){
-    this.service.userRegister(this.register).subscribe(data=>{
+    if(this.register.role=='Farmer'){
+    this.service.userFarmer(this.register,this.addres,this.land).subscribe(data=>{
       alert(JSON.stringify(data));
     }
     )}
+    else{
+      this.service.userBidder(this.register,this.addres).subscribe(data=>{
+        alert(JSON.stringify(data));
+      }
+      )
+    }
+  }
 }
 export class Register{
-  firstname: string;
-  lastname: string;
+  fullname: string;
   phoneno:number;
   role:String;
   email:string;
@@ -59,6 +71,3 @@ export class Register{
   account: Account = new Account();
   document: Document = new Document();
 }
-
-
-

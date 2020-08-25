@@ -5,11 +5,9 @@
             <form #form1="ngForm" (ngSubmit)="form1.form.valid && process()">
                 <div class="container">
                     <h1>Personal Details</h1>
-                    <label  for="uname"><b>First Name  </b></label>
-                    <input class="f1" type="text" placeholder="Enter First Name " name="uname" required minlength="3" [(ngModel)]=register.firstname #uname="ngModel"><br/>
-                    <label  for="uname"><b>Last Name  </b></label>
-                    <input class="f1" type="text" placeholder="Enter Last Name " name="uname" required minlength="3" [(ngModel)]=register.lastname #uname="ngModel"><br/>
-                  
+                    <label  for="uname"><b>Full Name  </b></label>
+                    <input class="f1" type="text" placeholder="Enter First Name " name="uname" required minlength="3" [(ngModel)]=register.fullname #uname="ngModel"><br/>
+                    
                     <div *ngIf="form1.submitted && uname.invalid">
                         <div class="error" *ngIf="uname.errors.required">
                           Name is required.
@@ -41,10 +39,10 @@
                       </div>
 
                     <div class="d1">Address Details</div>
-                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=addres.line1 #line1="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=addres.addressLine1 #line1="ngModel"><br/>
 
 
-                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=addres.line2 #line="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=addres.addressLine2 #line="ngModel"><br/>
 
                     <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=addres.state #state="ngModel" ><br/>
                    
@@ -62,7 +60,7 @@
                         </div>
                     </div>
 
-                    <label for="pin"><b>Pin </b></label> <input class="a4"  type="text" name="pin" required minlength="6"  [(ngModel)]=addres.pin #pin="ngModel" ><br/>
+                    <label for="pin"><b>Pin </b></label> <input class="a4"  type="text" name="pin" required minlength="6"  [(ngModel)]=addres.pincode #pin="ngModel" ><br/>
                    
                     <div *ngIf="form1.submitted && pin.invalid">
                     <div class="error" *ngIf="pin.errors.required">
@@ -78,7 +76,7 @@
                    
 
                     <div class="d1">Bank Details</div>
-                    <label for="account"><b>Account Number  </b></label> <input class="b1" type="number" name="account" required minlength="10" [(ngModel)]=register.account.accountno #account="ngModel"><br/>
+                    <label for="account"><b>Account Number  </b></label> <input class="b1" type="number" name="account" required minlength="10" [(ngModel)]=register.account.accountNumber #account="ngModel"><br/>
                     <div *ngIf="form1.submitted && account.invalid">
                         <div class="error" *ngIf="account.errors.required">
                             Account Number  is required.
@@ -87,7 +85,7 @@
                             Enter a Account Number.
                           </div>
                         </div>
-                    <label for="ifsc"><b>IFSC  </b></label> <input class="b2" type="text" name="ifsc" [(ngModel)]=register.account.ifsc #ifsc="ngModel"><br/>
+                    <label for="ifsc"><b>IFSC  </b></label> <input class="b2" type="text" name="ifsc" [(ngModel)]=register.account.ifscCode #ifsc="ngModel"><br/>
                    
                     <div *ngIf="form1.submitted && ifsc.invalid">
                         <div class="error" *ngIf="ifsc.errors.required">
@@ -134,16 +132,16 @@
                                 Minimun length of Password is 8
                               </div>
                             </div>
-
+                      <form>
                         <div class="roles">
                         <label for="role">Choose a Role:</label>
                         <button id ="farmer" class= rolebut (click)="assignRole('Bidder')" >Bidder</button>
 
                         <button id="bidder" class= rolebut (click)="assignRole('Farmer')"  >Farmer</button>
                         </div>
+                      </form>
 
                         <div *ngIf="register.role=='Farmer'">
-
                         <div  class="d1">Land Details</div>
                     <label for="area"><b>Area </b></label> <input class="l1" type="text" name="area" required [(ngModel)]=land.area #area="ngModel"><br/>
                    

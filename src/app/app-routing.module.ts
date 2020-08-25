@@ -1,3 +1,4 @@
+import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
 
 import { CropComponent } from './crop/crop.component';
 import { LoginComponent } from './login/login.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   {path:'app-login', component:LoginComponent},
   {path:'farmerregistration', component: FarmerregistrationComponent},
   {path:'crop', component: CropComponent},
+  {path:'bidderWelcome', component: BidderwelcomeComponent}
   
 
 ];
