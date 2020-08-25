@@ -15,6 +15,7 @@ import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.comp
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
 
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     FormsModule,
     HttpClientModule
   ],

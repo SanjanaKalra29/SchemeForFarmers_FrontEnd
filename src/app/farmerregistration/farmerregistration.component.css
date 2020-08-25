@@ -122,6 +122,14 @@ table{
       margin-left: 15px;
   
   }
+  .roles{
+      margin-top:30px;
+      margin-left: 50px;
+  }
+  .roles input{
+      margin-left: 50px;
+      margin-bottom: 30px;
+  }
   .button1{	
       margin-left: 430px;
   }
@@ -132,5 +140,18 @@ table{
   
   .error{
       color: red;
+  }
+  .roles{
+    margin-top:30px;
+    margin-left: 50px;
+}
+.roles input{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+  .rolebut{
+
+    margin-left:20px;
+
   }
   

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { login } from './login';
 import { LoginService } from '../login.service';
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   login :login = new login();
   displaymessage: String;
   showForm:boolean=false;
-  constructor(private service:LoginService) { }
+  constructor(private service:LoginService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +31,8 @@ loginuser(){
       this.displaymessage=data.message;
     }
   })
+
+  this.router.navigate(['/bidderWelcome']);
 }
 
 
