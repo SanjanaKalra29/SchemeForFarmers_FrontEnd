@@ -18,13 +18,13 @@
                       </div>
 
                     <label  for="contact"><b>Contact Number  </b></label>
-                    <input class="f2" type="number" placeholder="Enter Contact" name="contact" required minlength="10" [(ngModel)]=register.phoneno #contact="ngModel"><br/>
+                    <input class="f2" type="number" placeholder="Enter Contact" name="contact" required pattern="[0-9]{10}" [(ngModel)]=register.phoneno #contact="ngModel"><br/>
 
                     <div *ngIf="form1.submitted && contact.invalid">
                         <div class="error" *ngIf="contact.errors.required">
                           Contact Number is required.
                         </div>
-                        <div class="error" *ngIf="contact.errors.minlength">
+                        <div class="error" *ngIf="contact.errors.pattern">
                           Enter a valid Contact Number
                         </div>
                       </div>
@@ -39,12 +39,17 @@
                       </div>
 
                     <div class="d1">Address Details</div>
-                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=addres.addressLine1 #line1="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
 
+                    <div *ngIf="form1.submitted && line2.invalid">
+                      <div class="error" *ngIf="email.errors.required">
+                        Address is required.
+                      </div>
+                    </div>
 
-                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=addres.addressLine2 #line="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>
 
-                    <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=addres.state #state="ngModel" ><br/>
+                    <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=address.state #state="ngModel" ><br/>
                    
                     <div *ngIf="form1.submitted && state.invalid">
                         <div class="error" *ngIf="state.errors.required">
@@ -52,7 +57,7 @@
                         </div>
                     </div>
 
-                    <label for="city"><b>City </b></label> <input class="a3"  type="text" name="city"[(ngModel)]=addres.city #contact="ngModel" ><br/>
+                    <label for="city"><b>City </b></label> <input class="a3"  type="text" name="city"[(ngModel)]=address.city #contact="ngModel" ><br/>
                    
                     <div *ngIf="form1.submitted && state.invalid">
                         <div class="error" *ngIf="state.errors.required">
@@ -60,13 +65,13 @@
                         </div>
                     </div>
 
-                    <label for="pin"><b>Pin </b></label> <input class="a4"  type="text" name="pin" required minlength="6"  [(ngModel)]=addres.pincode #pin="ngModel" ><br/>
+                    <label for="pin"><b>Pin </b></label> <input class="a4"  type="number" name="pin" required pattern="[0-9]{6}"  [(ngModel)]=address.pincode #pin="ngModel" ><br/>
                    
                     <div *ngIf="form1.submitted && pin.invalid">
                     <div class="error" *ngIf="pin.errors.required">
                         Pin Code  is required.
                       </div>
-                      <div class="error" *ngIf="pin.errors.minlength">
+                      <div class="error" *ngIf="pin.errors.pattern">
                         Enter a valid Pin Code
                       </div>
                     </div>
@@ -76,16 +81,16 @@
                    
 
                     <div class="d1">Bank Details</div>
-                    <label for="account"><b>Account Number  </b></label> <input class="b1" type="number" name="account" required minlength="10" [(ngModel)]=register.account.accountNumber #account="ngModel"><br/>
+                    <label for="account"><b>Account Number  </b></label> <input class="b1" type="number" name="account" required pattern="[0-9]{12}" [(ngModel)]=register.accountNumber #account="ngModel"><br/>
                     <div *ngIf="form1.submitted && account.invalid">
                         <div class="error" *ngIf="account.errors.required">
                             Account Number  is required.
                           </div>
-                          <div class="error" *ngIf="account.errors.minlength">
+                          <div class="error" *ngIf="account.errors.pattern">
                             Enter a Account Number.
                           </div>
                         </div>
-                    <label for="ifsc"><b>IFSC  </b></label> <input class="b2" type="text" name="ifsc" [(ngModel)]=register.account.ifscCode #ifsc="ngModel"><br/>
+                    <label for="ifsc"><b>IFSC  </b></label> <input class="b2" type="text" name="ifsc" [(ngModel)]=register.ifscCode #ifsc="ngModel"><br/>
                    
                     <div *ngIf="form1.submitted && ifsc.invalid">
                         <div class="error" *ngIf="ifsc.errors.required">
@@ -96,19 +101,19 @@
                           </div>
                         </div>
                     <div class="doc">Document</div>
-                    <label for="aadhar"><b>Aadhar </b></label> <input class="d1" type="number" name="aadhar" required minlength="12"  [(ngModel)]=register.document.Aadharcard #addhar="ngModel"><br/>
-                                                              <!--  <input class="df1" type="file" name="aadharfile" required=true [(ngModel)]=register.document.addharfile><br/> -->
+                    <label for="aadhar"><b>Aadhar </b></label> <input class="d1" type="number" name="aadhar" required pattern="[0-9]{12}"  [(ngModel)]=register.Aadharcard #addhar="ngModel"><br/>
+                                                              <!--  <input class="df1" type="file" name="aadharfile" required=true [(ngModel)]=register.addharfile><br/> -->
 
                     <div *ngIf="form1.submitted && addhar.invalid">
                         <div class="error" *ngIf="addhar.errors.required">
                             Addhar Card Number is required.
                           </div>
-                          <div class="error" *ngIf="addhar.errors.minlength">
+                          <div class="error" *ngIf="addhar.errors.pattern">
                             Enter a valid Addhar Number
                           </div>
                         </div>
 
-                    <label for="pan"><b>PAN  </b></label> <input class="d2" type="text" name="pan"  required minlength="8" [(ngModel)]=register.document.pancard #pan="ngModel"> <br/>
+                    <label for="pan"><b>PAN  </b></label> <input class="d2" type="text" name="pan"  required minlength="8" [(ngModel)]=register.pancard #pan="ngModel"> <br/>
                                                       <!--   <input class="df2" type="file" name="panfile"  required=true [(ngModel)]=register.document.panfile ><br/> --> 
                                                           
                                                            
@@ -122,7 +127,7 @@
                         </div>
 
                         <label for="password"><b>Password  </b></label> <input class="pass1" type="text" name="pass1"  required minlength="8" [(ngModel)]=register.password #pass="ngModel"><br/>
-                        <label for="confirm"><b>Confirm Password  </b></label> <input class="pass2" type="password" name="pass2"  required minlength="8" [(ngModel)]=register.confirmPassword #pass="ngModel"><br/>
+                        <label for="confirm"><b>Confirm Password  </b></label> <input class="pass2" type="password" name="pass2"  required minlength="8" [(ngModel)]=confirmPassword #pass="ngModel"><br/>
                        
                         <div *ngIf="form1.submitted && pass.invalid">
                             <div class="error" *ngIf="pass.errors.required">
@@ -158,13 +163,13 @@
                           </div>
                         </div>
 
-                    <label for="pin"><b>Pin </b></label> <input class="l3" type="text" name="pin" required minlength="6"   [(ngModel)]=land.pin2 #pin2="ngModel"><br/>
+                    <label for="pin"><b>Pin </b></label> <input class="l3" type="text" name="pin" required pattern="[0-9]{6}"   [(ngModel)]=land.pincode #pin2="ngModel"><br/>
           
                     <div *ngIf="form1.submitted && pin2.invalid">
                     <div class="error" *ngIf="pin2.errors.required">
                         Pin Code  is required.
                       </div>
-                      <div class="error" *ngIf="pin2.errors.minlength">
+                      <div class="error" *ngIf="pin2.errors.pattern">
                         Enter a valid Pin Code
                       </div>
                     </div>

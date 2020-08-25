@@ -1,51 +1,94 @@
-body{    
-    padding-top: 5%;
-    padding-right: 15%;
-    padding-left: 15%;
+.start{
+	margin:20px;
+  margin-top:50px;
+  margin-bottom:50px;
+	margin-right:50px;
+	margin-left:300px;
+	background-color: white;
+	border-style:solid;
+	border-color:#0080109e;
+	height:800px;
+	width:800px;
+  padding-bottom: 30px;
 }
-
 .container1{
-   padding-top: 10%;
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-bottom: 10%; 
-    border:2px solid rgb(94, 255, 0);
-    height: 100%;
-    margin-bottom: 180px;
+  text-align:center;
+  height: auto;
+  width: auto;
+  margin-top:100px;
+  margin-bottom: 250px;
+  margin-left:250;
+  padding: 50px;
 }
 .button1{
-    margin-top: 10%;
-    text-align: center;
+  margin-top: 10%;
+  text-align: center;
 }
 .input1{
-    margin-left: 20px;
+  margin-left: 40px;
 }
 .input2{
-   margin-left: 20px;
-    margin-top: 5%;
+ margin-left: 40px;
+  margin-top: 7px;
 }
 .t1{
-   margin-left: 50px;
+ margin-left: 20px;
+ margin-top: 7px;
 }
 .t2{
-   margin-left: 45px;
+ margin-left: 40px;
+ margin-top: 7px;
 }
 .t3{
-   margin-left: 27px;
+ margin-left: 20px;
+ margin-top: 7px;
 }
 .t4{
-   margin-left: 65px;
+ margin-left: 20px;
+ margin-top: 7px;
+}
+.t5{
+ margin-left: 20px;
+ margin-top: 7px;
 }
 
+.t6{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+
+.t7{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+.t8{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+
+.t9{
+ margin-left: 20px;
+ margin-top: 7px;
+
+}
+
+.t10{
+ margin-left: 50px;
+
+}
 .request {
- background-color:#99ff25;
- color:black;
- font-size: 20px;
- padding: 10px 15px;
- border: none;
- cursor: pointer;
- opacity: 0.9;
+background-color:#99ff25;
+color:black;
+font-size: 20px;
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+opacity: 0.9;
 }
 .request:hover {
- opacity: 1;
+opacity: 1;
+}
+
+.error{
+  color: red;
 }

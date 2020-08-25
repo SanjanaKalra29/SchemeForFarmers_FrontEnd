@@ -1,9 +1,10 @@
 import { Router } from '@angular/router';
-import { RegisterService } from './../register.service';
 
-import { Land, Address, Account, Document } from './registrationentity';
+import { Land, Address} from './registrationentity';
 import { NgForm } from '@angular/forms';
 import { Component, ViewChild } from '@angular/core';
+import { FarmerregisterService } from '../farmerregister.service';
+import { registerFinal } from './registerfinal';
 
 @Component({
   selector: 'farmerregistration',
@@ -14,12 +15,12 @@ export class FarmerregistrationComponent {
 
   register: Register = new Register();
   land : Land = new Land();
-  addres: Address = new Address();
+  address: Address = new Address();
 
+  confirmPassword:string;
   roles:string[] = ['Farmer','Bidder'];
 
-
-  
+  regfinal: registerFinal = new registerFinal();
 
   assignRole(roles:String){
     if(roles==this.roles[0]){
@@ -32,14 +33,20 @@ export class FarmerregistrationComponent {
     }
     }
 
-  constructor(private service:RegisterService,private router: Router) { }
+  constructor(private service:FarmerregisterService,private router: Router) { }
   process(){
+    if(this.confirmPassword!=this.register.password)
+    {
+      alert("Password Does Not Match")
+    }
+    else{
     alert("Registeration Successfull")
     if(this.register.role=='Bidder'){
 
       this.router.navigate(['/app-login']);
 
     }
+  }
   }
 
   @ViewChild(NgForm) form1: NgForm;
@@ -48,16 +55,32 @@ export class FarmerregistrationComponent {
   }
 
   registerUser(){
-    if(this.register.role=='Farmer'){
-    this.service.userFarmer(this.register,this.addres,this.land).subscribe(data=>{
-      alert(JSON.stringify(data));
+    this.regfinal.address=this.address;
+    this.regfinal.register=this.register;
+    if(this.register.role=='Bidder'){
+      this.service.userRegister(this.regfinal).subscribe(data=>{
+
+        if(data.Status=="SUCCESS"){
+          //route to bidder welcome
+          this.router.navigate(['/bidderWelcome']);
+        }else{
+          //registration fail
+          alert("Registration Fail")
+        }
+      })
     }
-    )}
     else{
-      this.service.userBidder(this.register,this.addres).subscribe(data=>{
-        alert(JSON.stringify(data));
-      }
-      )
+      this.regfinal.land=this.land;
+      this.service.userRegister(this.regfinal).subscribe(data=>{
+
+        if(data.Status=="SUCCESS"){
+          //route to farmer welcome
+          this.router.navigate(['/app-farmer-welcome2']);
+        }else{
+          //registration fail
+          alert("Registration Fail")
+        }
+      })
     }
   }
 }
@@ -67,7 +90,10 @@ export class Register{
   role:String;
   email:string;
   password:string;
-  confirmPassword:string;
-  account: Account = new Account();
-  document: Document = new Document();
+  accountNumber:number;
+  ifscCode:string;
+  Aadharcard:number;
+  pancard:string;
+  addharfile: File;
+  panfile:File;
 }
