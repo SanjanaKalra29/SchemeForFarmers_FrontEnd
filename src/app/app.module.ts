@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
+import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { CropComponent } from './crop/crop.component';
 
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

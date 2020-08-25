@@ -3,18 +3,6 @@
     width: 30%;
     padding: 10px;
   }
-  
-  .row{
-    position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  /* height: 50px; */
-  background-color: #ccc;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+.footer-color{
+    background-color: purple;
   }
