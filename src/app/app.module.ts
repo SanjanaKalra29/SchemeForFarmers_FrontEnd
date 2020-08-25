@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,7 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     FarmerregistrationComponent,
-    CropComponent
+    CropComponent,
+    AboutComponent,
+    ContactUsComponent,
+    HomeComponent
   ],
   imports: [
 

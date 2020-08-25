@@ -1,3 +1,5 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutComponent } from './about/about.component';
 import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
 
 import { CropComponent } from './crop/crop.component';
@@ -10,9 +12,10 @@ const routes: Routes = [
   {path:'app-login', component:LoginComponent},
   {path:'farmerregistration', component: FarmerregistrationComponent},
   {path:'crop', component: CropComponent},
-  {path:'bidderWelcome', component: BidderwelcomeComponent}
+  {path:'bidderWelcome', component: BidderwelcomeComponent},
+  {path:'app-about', component: AboutComponent},
+  {path:'app-contact-us', component: ContactUsComponent}
   
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
