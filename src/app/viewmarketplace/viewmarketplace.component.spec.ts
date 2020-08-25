@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlacerequestComponent } from './placerequest.component';
+import { ViewmarketplaceComponent } from './viewmarketplace.component';
 
-describe('PlacerequestComponent', () => {
-  let component: PlacerequestComponent;
-  let fixture: ComponentFixture<PlacerequestComponent>;
+describe('ViewmarketplaceComponent', () => {
+  let component: ViewmarketplaceComponent;
+  let fixture: ComponentFixture<ViewmarketplaceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlacerequestComponent ]
+      declarations: [ ViewmarketplaceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlacerequestComponent);
+    fixture = TestBed.createComponent(ViewmarketplaceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

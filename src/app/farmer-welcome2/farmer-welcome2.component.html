@@ -9,18 +9,18 @@
     <body>
         <div class="topnav">
         <div class="log">
-           <button type="submit" class="log_out">Logout</button>
+           <button [routerLink]="'/app-login'" type="submit" class="log_out">Logout</button>
         </div>
         </div>
         <div class="container2">
             <p>
-                <a [routerLink]="'/placerequest'">Place Sell request</a>
+                <a [routerLink]="'/crop'">Place Sell request</a>
             </p>
             <p>
-                <a href="sold crop history">View Sold Crop History</a>
+                <a [routerLink]="'/app-viewsoldhistory'">View Sold Crop History</a>
             </p>
             <p>
-                <a href="market place">View Marketplace</a>
+                <a [routerLink]="'/app-viewmarketplace'">View Marketplace</a>
             </p>
         </div>
 </body>

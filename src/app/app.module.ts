@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -11,7 +10,9 @@ import { FarmerregistrationComponent } from './farmerregistration/farmerregistra
 import { CropComponent } from './crop/crop.component';
 import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
 import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.component';
-import { PlacerequestComponent } from './placerequest/placerequest.component';
+import { ViewsoldhistoryComponent } from './viewsoldhistory/viewsoldhistory.component';
+import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,13 +25,15 @@ import { PlacerequestComponent } from './placerequest/placerequest.component';
     CropComponent,
     BidderwelcomeComponent,
     FarmerWelcome2Component,
-    PlacerequestComponent
+    ViewsoldhistoryComponent,
+    ViewmarketplaceComponent
   ],
   imports: [
 
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
