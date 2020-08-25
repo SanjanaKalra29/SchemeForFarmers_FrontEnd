@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
 
 
 
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     FarmerregistrationComponent,
-    CropComponent
+    CropComponent,
+    BiddermarketplaceComponent
   ],
   imports: [
 
