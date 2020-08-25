@@ -8,6 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
+import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
+import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.component';
+import { ViewsoldhistoryComponent } from './viewsoldhistory/viewsoldhistory.component';
+import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -23,16 +27,17 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     FarmerregistrationComponent,
     CropComponent,
-    AboutComponent,
-    ContactUsComponent,
-    HomeComponent
+    BidderwelcomeComponent,
+    FarmerWelcome2Component,
+    ViewsoldhistoryComponent,
+    ViewmarketplaceComponent
   ],
   imports: [
 
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

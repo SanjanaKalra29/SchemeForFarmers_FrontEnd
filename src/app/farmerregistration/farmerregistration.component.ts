@@ -1,9 +1,10 @@
 import { Router } from '@angular/router';
-import { RegisterService } from './../register.service';
 
 import { Land, Address, Account, Document } from './registrationentity';
 import { NgForm } from '@angular/forms';
 import { Component, ViewChild } from '@angular/core';
+import { FarmerregisterService } from '../farmerregister.service';
+import { registerFinal } from './registerfinal';
 
 @Component({
   selector: 'farmerregistration',
@@ -14,7 +15,9 @@ export class FarmerregistrationComponent {
 
   register: Register = new Register();
   land : Land = new Land();
-  addres: Address = new Address();
+  address: Address = new Address();
+
+  regfinal: registerFinal = new registerFinal();
 
   roles:string[] = ['Farmer','Bidder'];
 
@@ -32,7 +35,7 @@ export class FarmerregistrationComponent {
     }
     }
 
-  constructor(private service:RegisterService,private router: Router) { }
+  constructor(private service:FarmerregisterService,private router: Router) { }
   process(){
     alert("Registeration Successfull")
     if(this.register.role=='Bidder'){
@@ -48,16 +51,28 @@ export class FarmerregistrationComponent {
   }
 
   registerUser(){
-    if(this.register.role=='Farmer'){
-    this.service.userFarmer(this.register,this.addres,this.land).subscribe(data=>{
-      alert(JSON.stringify(data));
+    this.regfinal.address=this.address;
+    this.regfinal.register=this.register;
+    if(this.register.role=='Bidder'){
+      this.service.userRegister(this.regfinal).subscribe(data=>{
+
+        if(data.Status=="SUCCESS"){
+          //route to bidder welcome
+        }else{
+          //registration fail
+        }
+      })
     }
-    )}
     else{
-      this.service.userBidder(this.register,this.addres).subscribe(data=>{
-        alert(JSON.stringify(data));
-      }
-      )
+      this.regfinal.land=this.land;
+      this.service.userRegister(this.regfinal).subscribe(data=>{
+
+        if(data.Status=="SUCCESS"){
+          //route to farmer welcome
+        }else{
+          //registration fail
+        }
+      })
     }
   }
 }
