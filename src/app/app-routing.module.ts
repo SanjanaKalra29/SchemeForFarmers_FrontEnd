@@ -1,3 +1,4 @@
+
 import { CropComponent } from './crop/crop.component';
 import { LoginComponent } from './login/login.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
@@ -7,9 +8,10 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path:'app-login', component:LoginComponent},
   {path:'farmerregistration', component: FarmerregistrationComponent},
-  {path:'crop', component: CropComponent}
-];
+  {path:'crop', component: CropComponent},
+  
 
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

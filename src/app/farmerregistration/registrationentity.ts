@@ -9,7 +9,7 @@ export class Address{
   }
  export class Land{
     area:string;
-    addres:string;
+    address:string;
     pin2:number;
   
   }
@@ -19,8 +19,8 @@ export class Address{
   
   }
   export class Document{
-    addhar:number;
-    pan:string;
+    Aadharcard:number;
+    pancard:string;
     addharfile: File;
     panfile:File;
   }

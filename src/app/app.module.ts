@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -9,8 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
 import { CropComponent } from './crop/crop.component';
-import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
 
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     FormsModule,
     HttpClientModule,
   ],
