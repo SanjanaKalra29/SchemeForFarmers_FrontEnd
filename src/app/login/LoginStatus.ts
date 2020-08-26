@@ -4,5 +4,5 @@ export class LoginStatus{
     name:String;
     status:String;
     message:String;
-    Role:String;
+    role:String;
 }

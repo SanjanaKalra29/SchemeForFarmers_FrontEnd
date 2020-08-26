@@ -1,39 +1,19 @@
-span {
-    /* color: greenyellow; */
-    /* font-size: large; */
-    display: inline-block;
+span{
+    color:lightskyblue;
+    font-size:large;
 }
-
-div {
+div{
     margin: auto;
     width: 50%;
     padding: 10px;
-    font-size: medium;
+    font-size:medium;
     overflow: hidden;
+    position:relative; 
+     
 }
 
-.contain {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    img{
+        background-size:cover;
+        opacity: 0.5;
 
-.content {
-    /* Setting text appearance */
-    font-family: "Montserrat", sans-serif;
-    font-size: 2.5vmin;
-    text-align: center;
-    color: #4d6d9a;
-    /* background-color: lightyellow; */
-    border-radius: 2%;
-    padding: 2rem;
-    margin: 2rem;
-}
-
-.textspacing {
-    padding: 0%;
-    margin: 0%;
-}
+    }

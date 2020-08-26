@@ -8,6 +8,7 @@
 }
 
 .contain {
+    position:relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -19,11 +20,19 @@
 .content {
     /* Setting text appearance */
     font-family: "Montserrat", sans-serif;
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     text-align: center;
-    color: #4d6d9a;
-    background-color: lightyellow;
+    color: black;
     border-radius: 2%;
     padding: 2rem;
     margin: 2rem;
+    margin-top:5px;
+    position:absolute;
+
+}
+
+img{
+    background-size:cover;
+    opacity: 0.5;
+    overflow:hidden;
 }
