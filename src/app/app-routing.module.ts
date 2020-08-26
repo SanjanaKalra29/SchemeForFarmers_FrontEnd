@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { CropComponent } from './crop/crop.component';
 import { LoginComponent } from './login/login.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'bidderwelcome', component:BidderwelcomeComponent},
   {path:'app-farmer-welcome2', component:FarmerWelcome2Component},
   {path:'app-viewsoldhistory', component:ViewsoldhistoryComponent},
-  {path:'app-viewmarketplace', component:ViewmarketplaceComponent}
+  {path:'app-viewmarketplace', component:ViewmarketplaceComponent},
+  {path:'app-home', component:HomeComponent}
 ];
 
 @NgModule({
