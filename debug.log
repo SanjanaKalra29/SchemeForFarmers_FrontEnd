@@ -67,3 +67,7 @@
 [0826/230855.360:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: Access is denied. (0x5)
 [0826/230855.372:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [0826/230855.373:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: Access is denied. (0x5)
+[0827/004206.997:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: Access is denied. (0x5)
+[0827/004207.001:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0827/004207.021:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0827/004207.023:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: Access is denied. (0x5)

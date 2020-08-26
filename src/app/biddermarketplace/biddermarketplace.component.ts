@@ -24,9 +24,9 @@ export class BiddermarketplaceComponent implements OnInit {
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      //alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
       this.crop = data.crops;
-      alert(JSON.stringify(this.crop[1].id));
+      alert(JSON.stringify(this.crop[1].name));
       alert(this.crop.length);
       
      // this.baseprice=data.basePrice;

@@ -14,7 +14,7 @@ export class BidderService {
   constructor(private http: HttpClient ) { }
 
   fetchActiveBids():Observable<activecrops>{//Active cops object
-    let url='http://localhost:8585/crops';
+    let url='http://localhost:8589/crops';
       return this.http.get<activecrops>(url);
   }
   getCurrrentBid(id:number): Observable<Value>{

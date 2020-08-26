@@ -16,14 +16,13 @@
                 <th>Closing Date</th>
             </tr>
             </thead>
-          
-            <tr *ngFor="let cur of crop">
+            <tr *ngFor="let c of crop">
                 <td></td>
-                <td>{{cur.id}}</td>
-                <td>{{cur.name}}</td>
-                <td>{{cur.fullname}}</td>
-                <td>{{cur.basePrice}}</td>
-                <td>{{cur.endDate}}hrs</td>
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.fullname}}</td>
+                <td>{{c.basePrice}}</td>
+                <td>{{c.endDate}}</td>
                 <td><Button (click) = "setidBid(cur.id,cur.name)" class="bidbtn">Make Bid</Button></td>
             </tr>
 
