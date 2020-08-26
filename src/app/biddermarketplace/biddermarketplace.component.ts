@@ -1,8 +1,9 @@
-import { CropDto } from './cropdto';
+
 import { BidderService } from './../bidder.service';
 import { Router } from '@angular/router';
 import{LiveBid} from './bidder';
 import { Component, OnInit } from '@angular/core';
+import { availablecrop } from './availablecrop';
 
 @Component({
   selector: 'biddermarketplace',
@@ -16,16 +17,17 @@ export class BiddermarketplaceComponent implements OnInit {
   name:string;
   currbid:number;
   liveprice:number;
-  crop:CropDto[];
+  crop: availablecrop[];
   show:boolean=true;
   baseprice:number;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      alert(JSON.stringify(data));
-      this.crop=data;
-      alert(data[0].cropType);
+      //alert(JSON.stringify(data));
+      this.crop = data.crops;
+      alert(JSON.stringify(this.crop[1].id));
+      alert(this.crop.length);
       
      // this.baseprice=data.basePrice;
     })
