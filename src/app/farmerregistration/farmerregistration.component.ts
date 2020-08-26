@@ -40,7 +40,7 @@ export class FarmerregistrationComponent {
       alert("Password Does Not Match")
     }
     else{
-    alert("Registeration Successfull")
+    alert(addressLine1);
     if(this.register.role=='Bidder'){
 
       this.router.navigate(['/app-login']);
@@ -62,6 +62,7 @@ export class FarmerregistrationComponent {
 
         if(data.Status=="SUCCESS"){
           //route to bidder welcome
+          alert("Registeration Successfull")
           this.router.navigate(['/bidderWelcome']);
         }else{
           //registration fail
