@@ -1,4 +1,4 @@
 export class RegistrationStatus{
-    Status:String;
-    Message:String;
+    status:String;
+    message:String;
 }

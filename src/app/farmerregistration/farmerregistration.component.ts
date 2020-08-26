@@ -4,6 +4,7 @@ import { Component, ViewChild } from '@angular/core';
 import { FarmerregisterService } from '../farmerregister.service';
 import { registerFinal } from './registerfinal';
 import { Router } from '@angular/router';
+import { bidderreg } from './bidderreg';
 
 @Component({
   selector: 'farmerregistration',
@@ -16,6 +17,7 @@ export class FarmerregistrationComponent {
   land : LandDetails = new LandDetails();
   address: Address = new Address();
 
+  bidder: bidderreg = new bidderreg();
   confirmPassword:string;
   roles:string[] = ['Farmer','Bidder'];
 
@@ -52,12 +54,14 @@ export class FarmerregistrationComponent {
   registerUser(){
     this.regfinal.address=this.address;
     this.regfinal.user=this.user;
+    this.regfinal.landdetails = this.land;
 
-    if(this.user.role=='Bidder'){
+    if(this.user.role=='Farmer'){
       alert(JSON.stringify(this.regfinal));
       this.service.userRegister(this.regfinal).subscribe(data=>{
 
-        if(data.Status=="SUCCESS"){
+        alert(JSON.stringify(data));
+        if(data.status=="SUCCESS"){
           //route to bidder welcome
           this.router.navigate(['/bidderWelcome']);
           alert("Registeration Successfull")
@@ -68,11 +72,17 @@ export class FarmerregistrationComponent {
       })
     }
     else{
-      this.regfinal.land=this.land;
-      alert(JSON.stringify(this.regfinal));
-      this.service.userRegister(this.regfinal).subscribe(data=>{
+      
+      this.bidder.address=this.address;
+      this.bidder.user=this.user;
+      
+      alert(JSON.stringify(this.bidder));
+      this.service. bidderRegister(this.bidder).subscribe(data=>{
 
-        if(data.Status=="SUCCESS"){
+      
+        alert(JSON.stringify(data));
+        console.log(data.status);
+        if(data.status =="SUCCESS"){
           //route to farmer welcome
           this.router.navigate(['/app-farmer-welcome2']);
         }else{
