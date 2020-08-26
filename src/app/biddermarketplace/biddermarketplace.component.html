@@ -44,8 +44,10 @@
                         <td>{{id}}</td>
                         <td>{{name}}</td>
                         <td>{{currbid}}</td>
-                        <td><input value=0 type="number" [(ngModel)]=livebid #bidprice></td>
-                        <td><Button (click) = "makeBid(id,currbid,livebid)" class="btn">Make Bid</Button></td>
+                        <div >
+                        <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
+                        <td><Button (click) = "makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
+                    </div>
                     </tr>
                 </table>
                 </div>

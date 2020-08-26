@@ -15,7 +15,7 @@ export class BiddermarketplaceComponent implements OnInit {
   id:number;
   name:string;
   currbid:number;
-  livebid:number;
+  liveprice:number;
   bidid:number;
   crop:CropDto=new CropDto();
  constructor(private service:BidderService,private router: Router) {}
@@ -37,7 +37,7 @@ export class BiddermarketplaceComponent implements OnInit {
    })
   }
 
-  makebid(id:number,currbid:number,livebid:number){
+  makeBid(id:number,currbid:number,livebid:number){
 
     if(livebid>(currbid+100)){
       //alert("bid succeess");
