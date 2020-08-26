@@ -37,7 +37,7 @@ export class BiddermarketplaceComponent implements OnInit {
    })
   }
 
-  makebid(id:number,currbid:number,livebid:number){
+  makeBid(id:number,currbid:number,livebid:number){
 
     if(livebid>(currbid+100)){
       //alert("bid succeess");
