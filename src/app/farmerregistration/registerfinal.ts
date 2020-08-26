@@ -1,8 +1,8 @@
 import { Address, Land } from './registrationentity';
-import { Register } from './farmerregistration.component';
+import {  User } from './farmerregistration.component';
 export class registerFinal{
 
-    register:Register=new Register();
+    User:User = new User();
     address:Address=new Address();
     land: Land= new Land();
     

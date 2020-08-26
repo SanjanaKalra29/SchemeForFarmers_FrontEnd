@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class FarmerregistrationComponent {
 
-  register: Register = new Register();
+  User:User = new User();
   land : Land = new Land();
   address: Address = new Address();
 
@@ -24,27 +24,22 @@ export class FarmerregistrationComponent {
   assignRole(roles:String){
     if(roles==this.roles[0]){
       alert("Farmer is Selected");
-      this.register.role='Farmer';
+      this.User.role='Farmer';
     }
     if(roles==this.roles[1]){
     alert("Bidder is Selected");
-    this.register.role='Bidder';
+    this.User.role='Bidder';
     }
     }
 
   constructor(private service:FarmerregisterService,private router: Router) { }
   process(){
-    if(this.confirmPassword!=this.register.password)
+    if(this.confirmPassword!=this.User.password)
     {
       alert("Password Does Not Match")
     }
     else{
-    alert("Registeration Successfull")
-    if(this.register.role=='Bidder'){
-
-      this.router.navigate(['/app-login']);
-
-    }
+    this.registerUser();
   }
   }
 
@@ -55,13 +50,16 @@ export class FarmerregistrationComponent {
 
   registerUser(){
     this.regfinal.address=this.address;
-    this.regfinal.register=this.register;
-    if(this.register.role=='Bidder'){
+    this.regfinal.User=this.User;
+
+    if(this.User.role=='Bidder'){
+      alert(JSON.stringify(this.regfinal));
       this.service.userRegister(this.regfinal).subscribe(data=>{
 
         if(data.Status=="SUCCESS"){
           //route to bidder welcome
           this.router.navigate(['/bidderWelcome']);
+          alert("Registeration Successfull")
         }else{
           //registration fail
           alert("Registration Fail")
@@ -70,6 +68,7 @@ export class FarmerregistrationComponent {
     }
     else{
       this.regfinal.land=this.land;
+      alert(JSON.stringify(this.regfinal));
       this.service.userRegister(this.regfinal).subscribe(data=>{
 
         if(data.Status=="SUCCESS"){
@@ -83,7 +82,7 @@ export class FarmerregistrationComponent {
     }
   }
 }
-export class Register{
+export class User{
   fullname: string;
   phoneno:number;
   role:String;
