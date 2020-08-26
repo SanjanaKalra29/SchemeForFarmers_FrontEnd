@@ -41,7 +41,7 @@
                     <div class="d1">Address Details</div>
                     <input class="a1" type="text" placeholder="Line 1" name="addressLine1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
 
-                    <div *ngIf="form1.submitted && line2.invalid">
+                   <div *ngIf="form1.submitted && line2.invalid">
                       <div class="error" *ngIf="email.errors.required">
                         Address is required.
                       </div>

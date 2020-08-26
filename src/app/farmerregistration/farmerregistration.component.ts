@@ -37,7 +37,7 @@ export class FarmerregistrationComponent {
   constructor(private service:FarmerregisterService,private router: Router) { }
   process(){
 
-    alert(this.address.addressLine1)
+    alert(this.address.addressLine2)
     if(this.confirmPassword!=this.user.password)
     {
       alert("Password Does Not Match")

@@ -1,11 +1,54 @@
-<body>
-    <h3>Output</h3>
-    <ng-container *ngFor="let i of [].constructor(5)">Amit</ng-container>
- <!-- <div class="container1" *ngFor="let item of [].constructor(5); let i = index" ></div> -->
-    <div class="card">
-        <div>Crop Name : {{fruits[0]}}</div>
-        <div>Crop type :{{fruits[0]}}</div> 
-        <div>Current Bid:{{fruits[0]}}</div>
-    </div>
 
-</body>
+<div class="col">
+    <div  class="form-row">
+        <div class="container "> 
+        <div>
+            <h3 class="heading">Current Bids</h3> </div>
+        
+        <table class="table1">
+            <thead class="thead-dark">
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Name</th>
+                <th>Base Price</th>
+                <th>Current Bid</th>
+                <th>Closing Date</th>
+            </tr>
+            </thead>
+            <tr *ngFor="let cur of crop">
+                <td>{{cur.id}}</td>
+                <td>{{cur.name}}</td>
+                <td>{{cur.fullname}}</td>
+                <td>{{cur.basePrice}}</td>
+                <td>{{cur.endDate}}hrs</td>
+                <td><Button (click) = "setidBid(cur.id,cur.name)" class="bidbtn">Make Bid</Button></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="container"> 
+                <div>
+                    <h3 class="heading2">Make Bid</h3> </div>
+                <table class="table2">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Crop ID</th>
+                        <th>Crop Name</th>
+                        <th>Current Bid</th>
+                        <th>Enter your Bid Price</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{currbid}}</td>
+                        <td><input value=0 type="number" [(ngModel)]=livebid #bidprice></td>
+                        <td><Button (click) = "makeBid(id,currbid,livebid)" class="btn">Make Bid</Button></td>
+                    </tr>
+                </table>
+                </div>
+
+    </div>
+</div>
