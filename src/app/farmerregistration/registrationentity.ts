@@ -8,9 +8,23 @@ export class Address{
     pincode:number; 
   
   }
- export class Land{
+ export class LandDetails{
     area:string;
     address:string;
     pincode:number;
   
+  }
+
+  export class User{
+    fullname: string;
+    phoneno:number;
+    role:String;
+    email:string;
+    password:string;
+    accountNumber:number;
+    ifscCode:string;
+    Aadharcard:number;
+    pancard:string;
+    addharfile: File;
+    panfile:File;
   }

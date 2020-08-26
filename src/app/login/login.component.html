@@ -8,8 +8,17 @@
 			#pass="ngModel" />
 		<input type="submit" value="Login" id="submit">
 	</form>
-	<div id="signup"> <a [routerLink]="'/farmerregistration'">Are you new here? </a> </div>
+	<div id="signup"> <a [routerLink]="'/farmerregistration'" >Are you new here? </a> </div>
 
+	<div *ngIf = "myform.form.invalid">
+	<div *ngIf="email.invalid && (email.dirty || email.touched)">
+		You need to enter an email
+	</div>
+	<div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+		Please enter password to login
+	</div>
+</div>
+</div>
 				<div *ngIf = "myform.form.invalid">
 					<div *ngIf="email.invalid && (email.dirty || email.touched)">
 						You need to enter an email
@@ -22,4 +31,3 @@
 					{{displaymessage}}
 				</div>
 				
-</div>

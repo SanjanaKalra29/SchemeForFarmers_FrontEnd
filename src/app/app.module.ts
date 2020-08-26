@@ -13,7 +13,9 @@ import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.compo
 import { ViewsoldhistoryComponent } from './viewsoldhistory/viewsoldhistory.component';
 import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
+import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
 
 
 
