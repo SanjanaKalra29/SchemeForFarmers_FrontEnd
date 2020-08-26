@@ -1,3 +1,4 @@
+import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
 import { HomeComponent } from './home/home.component';
 import { CropComponent } from './crop/crop.component';
 import { LoginComponent } from './login/login.component';
@@ -22,9 +23,9 @@ const routes: Routes = [
   {path:'app-viewmarketplace', component:ViewmarketplaceComponent},
   {path:'app-home', component:HomeComponent},
   {path:'app-contact-us', component:ContactUsComponent},
-  {path:'app-about', component:AboutComponent}
+  {path:'app-about', component:AboutComponent},
+  {path:'biddermarketplace', component:BiddermarketplaceComponent}
 ];
-
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,11 +1,67 @@
 <body>
-    <h3>Output</h3>
-    <ng-container *ngFor="let i of [].constructor(5)">Amit</ng-container>
- <!-- <div class="container1" *ngFor="let item of [].constructor(5); let i = index" ></div> -->
+     <h3>Output</h3>
+   <!--<ng-container *ngFor="let i of [].constructor(5)">Amit</ng-container>-->
+  <div class="container1" *ngFor="let item of [].constructor(5); let i = index" ></div> 
     <div class="card">
         <div>Crop Name : {{fruits[0]}}</div>
         <div>Crop type :{{fruits[0]}}</div> 
         <div>Current Bid:{{fruits[0]}}</div>
     </div>
 
+<!--
 </body>
+<div class="col">
+    <div  class="form-row">
+        <div class="container "> 
+        <div>
+            <h3 class="text-center text-uppercase">Current Bids</h3> </div>
+        
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Price</th>
+                <th>Current Bid</th>
+                <th>Time Left</th>
+            </tr>
+            </thead>
+            <tr *ngFor="let cur of currentBid">
+                <td>{{cur.CropID}}</td>
+                <td>{{cur.Crop_Name}}</td>
+                <td>{{cur.Farmer_Price}}</td>
+                <td>{{cur.CurrentBid}}</td>
+                <td>{{cur.TimeLeft}}hrs</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="container"> 
+                <div>
+                    <h3 class="text-center text-uppercase">Make Bid</h3> </div>
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Crop ID</th>
+                        <th>Crop Name</th>
+                        <th>Farmer Base Price</th>
+                        <th>Bidder Email</th>
+                        <th>Enter your Bid Price</th>
+                        <th>Confirm</th>
+                    </tr>
+                </thead>
+                    <tr *ngFor="let f of crop">
+                        <td>{{f.CropID}}</td>
+                        <td>{{f.CropName}}</td>
+                        <td>{{f.BaseFarmerPrice}}</td>
+                        <td><input class="inputClass" [value]="bidemail"></td>
+                        <td><input value=0 type="number" #bidprice></td>
+                        <td><Button (click) = "makeBid(f.CropID,f.BaseFarmerPrice,bidprice.value)" class="btn btn-dark">Make Bid</Button></td>
+                    </tr>
+                </table>
+                </div>
+
+    </div>
+</div>
+-->
