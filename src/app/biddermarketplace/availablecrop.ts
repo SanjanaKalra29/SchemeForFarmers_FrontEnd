@@ -1,4 +1,4 @@
-export class CropDto{
+export class availablecrop{
     id:number;
     name:string;
     cropType:string;

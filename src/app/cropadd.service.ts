@@ -12,7 +12,7 @@ export class CropaddService {
   constructor(private http: HttpClient) { }
 
   addCrop(adddata:cropdto): Observable<RegistrationStatus>{
-    let url = 'http://localhost:8585/cropregister';
+    let url = 'http://localhost:8589/cropregister';
     return this.http.post<RegistrationStatus>(url, adddata);
 
   }

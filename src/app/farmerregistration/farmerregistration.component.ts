@@ -58,13 +58,14 @@ export class FarmerregistrationComponent {
 
     if(this.user.role=='Farmer'){
       alert(JSON.stringify(this.regfinal));
-      this.service.userRegister(this.regfinal).subscribe(data=>{
+      this.service.userRegister(this.regfinal).subscribe(data=>{ 
 
         alert(JSON.stringify(data));
         if(data.status=="SUCCESS"){
           //route to bidder welcome
-          this.router.navigate(['/bidderWelcome']);
           alert("Registeration Successfull")
+          this.router.navigate(['']);
+        
         }else{
           //registration fail
           alert("Registration Fail")
