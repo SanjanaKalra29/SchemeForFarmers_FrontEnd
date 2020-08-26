@@ -54,3 +54,7 @@ input[type=email], input[type=password] {
   #signup{
 	padding-top: 10%;
   }
+
+  .error{
+    color:red;
+  }
