@@ -61,7 +61,7 @@ export class FarmerregistrationComponent {
       this.service.userRegister(this.regfinal).subscribe(data=>{
 
         alert(JSON.stringify(data));
-        if(data.Status=="SUCCESS"){
+        if(data.status=="SUCCESS"){
           //route to bidder welcome
           this.router.navigate(['/bidderWelcome']);
           alert("Registeration Successfull")
@@ -79,8 +79,10 @@ export class FarmerregistrationComponent {
       alert(JSON.stringify(this.bidder));
       this.service. bidderRegister(this.bidder).subscribe(data=>{
 
+      
         alert(JSON.stringify(data));
-        if(data.Status=="SUCCESS"){
+        console.log(data.status);
+        if(data.status =="SUCCESS"){
           //route to farmer welcome
           this.router.navigate(['/app-farmer-welcome2']);
         }else{

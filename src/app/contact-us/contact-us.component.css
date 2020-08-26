@@ -8,6 +8,12 @@ div{
     padding: 10px;
     font-size:medium;
     overflow: hidden;
-    
-    
+    position:relative; 
+     
 }
+
+    img{
+        background-size:cover;
+        opacity: 0.5;
+
+    }
