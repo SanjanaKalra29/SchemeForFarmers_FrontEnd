@@ -15,7 +15,7 @@
   text-align:center;
   height: auto;
   width: auto;
-  margin-top:100px;
+  margin-top:30px;
   margin-bottom: 250px;
   margin-left:250;
   padding: 50px;
@@ -25,6 +25,7 @@
   text-align: center;
 }
 .input1{
+  margin-top:20px;
   margin-left: 40px;
 }
 .input2{
@@ -36,11 +37,11 @@
  margin-top: 7px;
 }
 .t2{
- margin-left: 40px;
+ margin-left: 25px;
  margin-top: 7px;
 }
 .t3{
- margin-left: 20px;
+ margin-left: 15px;
  margin-top: 7px;
 }
 .t4{
@@ -73,7 +74,7 @@
 }
 
 .t10{
- margin-left: 50px;
+ margin-left: 30px;
 
 }
 .request {

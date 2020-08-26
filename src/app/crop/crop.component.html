@@ -1,7 +1,7 @@
 <div class="start">
-  <h1 align="center">Place Sell Request</h1>
 <form #form1="ngForm">
         <div align="center" class="container1">
+          <h1 align="center">Place Sell Request</h1>
             <div class="input1">
             <label  for="name"><b>Crop name :</b></label>
             <input class="t1" name="name" placeholder=" crop name"  type="text" required  [(ngModel)]=crop.name #name="ngModel"><br/>
@@ -52,7 +52,7 @@
               </div>
 
             <label  for="basePrice"><b>base Price :</b></label>
-            <input class="t6" name="basePrice" placeholder=" crop name" type="number" required [(ngModel)]=crop.basePrice #basePrice="ngModel"><br/>
+            <input class="t6" name="basePrice" placeholder=" price" type="number" required [(ngModel)]=crop.basePrice #basePrice="ngModel"><br/>
 
             <div *ngIf="form1.submitted && basePrice.invalid">
               <div class="error" *ngIf="basePrice.errors.required">
@@ -79,7 +79,7 @@
               </div>
 
             <label  for="status"><b>status : </b></label>
-            <input class="t9" name="status" type="text" required [(ngModel)]=crop.status #status="ngModel">
+            <input class="t9" name="status" type="text" placeholder=" status" required [(ngModel)]=crop.status #status="ngModel">
 
             <div *ngIf="form1.submitted && status.invalid">
               <div class="error" *ngIf="status.errors.required">
@@ -90,8 +90,8 @@
             </div>
 		
         <div class="input2">
-          <label  for="soilPH"><b>Soil PH Certificate :</b></label>
-          <input class="t10" name="soilPH" type="text" required [(ngModel)]=crop.soilPH #soilPH="ngModel"/>
+          <label  for="soilPH"><b>Soil PH :</b></label>
+          <input class="t10" name="soilPH" placeholder=" soil PH " type="text" required [(ngModel)]=crop.soilPH #soilPH="ngModel"/>
         </div>
 
         <div *ngIf="form1.submitted && soilPH.invalid">

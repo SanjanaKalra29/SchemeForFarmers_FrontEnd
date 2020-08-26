@@ -7,21 +7,20 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
     <body>
-        <div class="topnav">
-        <div class="log">
-           <button [routerLink]="'/app-login'" type="submit" class="log_out">Logout</button>
-        </div>
-        </div>
+        <br/>
         <div class="container2">
+            <h1>Welcome Farmer</h1>
+            <br>
+            <h2>Select your choice</h2><br/>
             <p>
-                <a [routerLink]="'/crop'">Place Sell request</a>
-            </p>
+                <a style="color:#26269c;font-size:25px;" [routerLink]="'/crop'">Place Sell request</a>
+            </p><br>
             <p>
-                <a [routerLink]="'/app-viewsoldhistory'">View Sold Crop History</a>
-            </p>
+                <a style="color:#26269c;font-size:25px;" [routerLink]="'/app-viewsoldhistory'">View Sold Crop History</a>
+            </p><br>
             <p>
-                <a [routerLink]="'/app-viewmarketplace'">View Marketplace</a>
-            </p>
+                <a style="color:#26269c;font-size:25px;" [routerLink]="'/app-viewmarketplace'">View Marketplace</a>
+            </p><br>
         </div>
 </body>
 </html>
