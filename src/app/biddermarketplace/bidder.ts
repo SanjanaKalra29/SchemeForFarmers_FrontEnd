@@ -1,7 +1,7 @@
 export class LiveBid{
 
-    CropId: number;
-    BidId:number;
-    BidPrice:number;
+    cropid: number;
+    userid:number;
+    amount:number;
     
 }

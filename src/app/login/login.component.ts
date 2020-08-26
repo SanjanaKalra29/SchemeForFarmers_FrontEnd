@@ -26,11 +26,12 @@ loginuser(){
       console.log(data.userId);
       sessionStorage.setItem('UserId',String(data.userId));
       this.displaymessage=data.message;
-      if(data.Role=='Bidder'){
+      alert(data.role);
+      if(data.role=='Bidder'){
       this.router.navigate(['/biddermarketplace']);
        }
     else{
-      this.router.navigate(['/farmermarketplace']);
+      this.router.navigate(['/app-farmer-welcome2']);
        }
     }
     else{
