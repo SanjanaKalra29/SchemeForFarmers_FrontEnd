@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsoldhistoryComponent implements OnInit {
 
+  date :Date;
+  name:string;
+  quantity:number;
+  baseprice:number;
+  soldprice:number;
   constructor() { }
 
   ngOnInit(): void {

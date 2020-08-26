@@ -23,9 +23,8 @@
                 <td>{{c.fullname}}</td>
                 <td>{{c.basePrice}}</td>
                 <td>{{c.endDate}}</td>
-                <td><Button (click) = "setidBid(cur.id,cur.name)" class="bidbtn">Make Bid</Button></td>
+                <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
             </tr>
-
         </table>
         </div>
     </div>
@@ -48,7 +47,7 @@
                         <td>{{currbid}}</td>
                         <ng-container *ngIf="show">
                         <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
-                        <td><Button (click) = "makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
+                        <td><Button type="submit" onclick="makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
                     </ng-container>
                     </tr>
                 </table>

@@ -25,7 +25,8 @@ const routes: Routes = [
   {path:'app-home', component:HomeComponent},
   {path:'app-contact-us', component:ContactUsComponent},
   {path:'app-about', component:AboutComponent},
-  {path:'biddermarketplace', component:BiddermarketplaceComponent}
+  {path:'biddermarketplace', component:BiddermarketplaceComponent},
+  {path:'app-contact-us',component:ContactUsComponent}
 ];
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],

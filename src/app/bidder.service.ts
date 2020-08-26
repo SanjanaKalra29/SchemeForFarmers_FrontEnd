@@ -14,11 +14,11 @@ export class BidderService {
   constructor(private http: HttpClient ) { }
 
   fetchActiveBids():Observable<activecrops>{//Active cops object
-    let url='http://localhost:8589/crops';
+    let url='http://localhost:8585/crops';
       return this.http.get<activecrops>(url);
   }
   getCurrrentBid(id:number): Observable<Value>{
-    let url = 'http://localhost:8585/getcurrentprice';
+    let url = 'http://localhost:8585/bid?cropid='+id;
     return this.http.post<Value>(url, id);
 
   }

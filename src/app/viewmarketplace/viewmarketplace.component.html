@@ -1,32 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>view marketplace</title>
 
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-</head>
-<body>
-        <div class="container1">
-            <div class="top">
-            <p class="p1">Crop Type:<u class="u1">Type of Crop</u></p>
-            <p class="p1">Crop Name:<u class="u1">Name of Crop</u></p>
-            <p class="p1">Base Price:<u class="u1">Base Price of Crop</u></p>
-        </div>
-        <div class="card">
-            <p>Current Bid Amount</p>
-        </div>
-        <div class="bottom">
-            <p class="p2">Previous Bids</p>
-        </div>
-        <div class="card2">
-           <h4 class="bid">Bid1</h4>
-            <h4 class="bid">Bid2</h4>
-            <h4 class="bid">Bid2</h4>
-
+<div class="col">
+    <div  class="form-row">
+        <div class="container "> 
+        <div>
+            <h3 class="heading">Crops</h3> </div>
+        
+        <table class="table1">
+            <thead class="thead-dark">
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Name</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tr *ngFor="let c of crop">
+                <td></td>
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.fullname}}</td>
+                <td>{{c.status}}</td>
+                <td><Button type="submit" (click)= "setid(c.id,c.status)" class="bidbtn">Cick to View More</Button></td> <!-- this will come in if condition only if the status of crop is Active-->
+            </tr>
+        </table>
         </div>
     </div>
-        
-</body>
-</html>
+    <div class="form-row">
+        <div class="container"> 
+                <div>
+                    <h3 class="heading2">Your Active Bids</h3> </div>
+                <table class="table2">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Crop ID</th>
+                        <th>Crop Name</th>
+                        <th>Current Bid</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{currbid}}</td>
+                      <!---<ng-container *ngIf="show">
+                        <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
+                        <td><Button type="submit" onclick="makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
+                    </ng-container>-->  
+                    </tr>
+                </table>
+                </div>
+    </div>
+</div>

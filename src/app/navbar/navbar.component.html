@@ -1,7 +1,10 @@
- <div class="topnav">
-    <a class="current" [routerLink]="'app-home'">Home</a>
-    <a class="current" [routerLink]="'/app-farmer-welcome2'">News</a>
-    <a id="nav_Contact" [routerLink]="'biddermarketplace'">Contact</a>
-    <a id="nav_about" [routerLink]="'app-about'">About</a>
-    <a id="nav_login"[routerLink]="'/app-login'">Login</a>
+<div class="topnav">
+    <a [routerLink]="'app-home'">Home</a>
+    <!-- <a [routerLink]="'/app-farmer-welcome2'">News</a> -->
+    <a [routerLink]="'app-contact-us'">Contact</a>
+    <a [routerLink]="'app-about'">About</a>
+    <a [routerLink]="'/app-login'">Login</a>
+    <div class ="right">
+    <a  [routerLink]="'/app-login'">Logout</a>
+</div>
 </div>

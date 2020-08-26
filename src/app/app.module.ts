@@ -16,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
+import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
+
 
 
 
@@ -30,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     BidderwelcomeComponent,
     FarmerWelcome2Component,
     ViewsoldhistoryComponent,
-    ViewmarketplaceComponent
+    ViewmarketplaceComponent,
+    BiddermarketplaceComponent,
   ],
   imports: [
 
@@ -38,7 +42,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

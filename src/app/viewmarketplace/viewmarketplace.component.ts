@@ -1,3 +1,5 @@
+import { availablecrop } from './../biddermarketplace/availablecrop';
+import { Crop } from './../crop/crop';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewmarketplaceComponent implements OnInit {
 
+  id:number;
+  name:string;
+  currbid:number;
+  crop: availablecrop[];
   constructor() { }
 
   ngOnInit(): void {

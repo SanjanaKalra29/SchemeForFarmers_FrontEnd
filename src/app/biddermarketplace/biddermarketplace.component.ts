@@ -18,24 +18,24 @@ export class BiddermarketplaceComponent implements OnInit {
   currbid:number;
   liveprice:number;
   crop: availablecrop[];
-  show:boolean=true;
-  baseprice:number;
+  show:boolean=false;
+  basePrice:number;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
       this.crop = data.crops;
-      alert(JSON.stringify(this.crop[1].name));
-      alert(this.crop.length);
-      
      // this.baseprice=data.basePrice;
     })
   } 
-  setidBid(id:number,name:string,currbid:number){
+  setidBid(id:number,name:string,basePrice:number){
 
     this.id=id;
     this.name=name;
+    this.basePrice=basePrice;
+
+    //alert(this.id);
     this.show=!this.show; //to shoq the bid input only when the user clicks on bid
     //hit to servier to get the latest current bid
    this.service.getCurrrentBid(this.id).subscribe(data=>{
@@ -46,7 +46,7 @@ export class BiddermarketplaceComponent implements OnInit {
 
   makeBid(id:number,currbid:number,livebid:number){
 
-    if(livebid>(currbid+100)){
+    if(livebid>(currbid+100)&& livebid>this.basePrice){
       //alert("bid succeess");
       this.live.cropid=id;
       this.live.amount=livebid;
