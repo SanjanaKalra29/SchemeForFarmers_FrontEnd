@@ -1,3 +1,4 @@
+import { CropDto } from './cropdto';
 import { BidderService } from './../bidder.service';
 import { Router } from '@angular/router';
 import{LiveBid} from './bidder';
@@ -16,11 +17,13 @@ export class BiddermarketplaceComponent implements OnInit {
   currbid:number;
   livebid:number;
   bidid:number;
+  crop:CropDto=new CropDto();
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      //
+      alert(JSON.stringify(data));
+      this.crop=data;
     })
   } 
   setidBid(id:number,name:string,currbid:number){

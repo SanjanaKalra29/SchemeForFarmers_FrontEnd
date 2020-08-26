@@ -15,7 +15,7 @@ export class CropComponent{
 
 }
 
-export class Crop{
+class Crop{
   name: string;
   quantity:number;
   cropType:string;

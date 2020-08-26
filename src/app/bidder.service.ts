@@ -1,4 +1,5 @@
-import { Crop } from './crop/crop.component';
+import { CropDto } from './biddermarketplace/cropdto';
+
 import { LiveBid } from './biddermarketplace/bidder';
 import { Observable } from 'rxjs';
 import { Value, BidStatus } from './biddermarketplace/bidStatus';
@@ -12,9 +13,9 @@ export class BidderService {
 
   constructor(private http: HttpClient ) { }
 
-  fetchActiveBids():Observable<Crop>{//Active cops object
+  fetchActiveBids():Observable<CropDto>{//Active cops object
     let url='http://localhost:8282/RestApp/api/getlist';
-      return this.http.get(url);
+      return this.http.get<CropDto>(url);
   }
   getCurrrentBid(id:number): Observable<Value>{
     let url = 'http://localhost:8585/getcurrentprice';

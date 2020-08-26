@@ -10,17 +10,19 @@
             <tr>
                 <th>Crop Id</th>
                 <th>Crop Name</th>
-                <th>Farmer Price</th>
+                <th>Farmer Name</th>
+                <th>Base Price</th>
                 <th>Current Bid</th>
-                <th>Time Left</th>
+                <th>Closing Date</th>
             </tr>
             </thead>
-            <tr *ngFor="let cur of currentBid">
-                <td>{{cur.CropID}}</td>
-                <td>{{cur.Crop_Name}}</td>
-                <td>{{cur.Farmer_Price}}</td>
-                <td>{{cur.TimeLeft}}hrs</td>
-                <td><Button (click) = "setidBid(cur.CropID,cur.Crop_Name)" class="bidbtn">Make Bid</Button></td>
+            <tr *ngFor="let cur of crop">
+                <td>{{cur.id}}</td>
+                <td>{{cur.name}}</td>
+                <td>{{cur.fullname}}</td>
+                <td>{{cur.basePrice}}</td>
+                <td>{{cur.endDate}}hrs</td>
+                <td><Button (click) = "setidBid(cur.id,cur.name)" class="bidbtn">Make Bid</Button></td>
             </tr>
         </table>
         </div>
