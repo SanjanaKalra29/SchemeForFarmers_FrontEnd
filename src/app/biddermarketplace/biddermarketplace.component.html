@@ -16,7 +16,7 @@
                 <th>Closing Date</th>
             </tr>
             </thead>
-          
+          <tbody>
             <tr *ngFor="let cur of crop">
                 <td></td>
                 <td>{{cur.id}}</td>
@@ -26,7 +26,7 @@
                 <td>{{cur.endDate}}hrs</td>
                 <td><Button (click) = "setidBid(cur.id,cur.name)" class="bidbtn">Make Bid</Button></td>
             </tr>
-
+        </tbody>
         </table>
         </div>
     </div>
