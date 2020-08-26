@@ -44,7 +44,7 @@
                         <td>{{id}}</td>
                         <td>{{name}}</td>
                         <td>{{currbid}}</td>
-                        <div >
+                        <div *ngIf="show" >
                         <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
                         <td><Button (click) = "makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
                     </div>

@@ -17,7 +17,8 @@ export class BiddermarketplaceComponent implements OnInit {
   currbid:number;
   liveprice:number;
   bidid:number;
-  crop:CropDto=new CropDto();
+  crop:CropDto[];
+  show:boolean=false;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
@@ -30,6 +31,7 @@ export class BiddermarketplaceComponent implements OnInit {
 
     this.id=id;
     this.name=name;
+    this.show=true;
     //hit to servier to get the latest current bid
    this.service.getCurrrentBid(this.id).subscribe(data=>{
     alert(JSON.stringify(data));

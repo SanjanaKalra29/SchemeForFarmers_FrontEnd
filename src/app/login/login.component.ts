@@ -26,13 +26,19 @@ loginuser(){
       console.log(data.userId);
       sessionStorage.setItem('UserId',String(data.userId));
       this.displaymessage=data.message;
+      if(data.Role=='Bidder'){
+      this.router.navigate(['/biddermarketplace']);
+       }
+    else{
+      this.router.navigate(['/farmermarketplace']);
+       }
     }
     else{
       this.displaymessage=data.message;
     }
   })
 
-  this.router.navigate(['/bidderWelcome']);
+  
 }
 
 
