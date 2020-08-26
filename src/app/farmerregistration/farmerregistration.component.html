@@ -39,15 +39,18 @@
                       </div>
 
                     <div class="d1">Address Details</div>
-                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
+                  <!--  <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
 
-                    <div *ngIf="form1.submitted && line2.invalid">
+                   <div *ngIf="form1.submitted && line2.invalid">
                       <div class="error" *ngIf="email.errors.required">
                         Address is required.
                       </div>
                     </div>
 
-                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>--> 
+
+                    <input class="a1" type="text" name="Line1" required [(ngModel)]=address.addressLine1 #state="ngModel" ><br/>
+                    <input class="a1" type="text" name="Line1" required [(ngModel)]=address.addressLine2 #state="ngModel" ><br/>
 
                     <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=address.state #state="ngModel" ><br/>
                    
