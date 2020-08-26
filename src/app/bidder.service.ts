@@ -1,10 +1,10 @@
-import { CropDto } from './biddermarketplace/cropdto';
 
 import { LiveBid } from './biddermarketplace/bidder';
 import { Observable } from 'rxjs';
 import { Value, BidStatus } from './biddermarketplace/bidStatus';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { activecrops } from './biddermarketplace/activecrops';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +13,9 @@ export class BidderService {
 
   constructor(private http: HttpClient ) { }
 
-  fetchActiveBids():Observable<CropDto[]>{//Active cops object
-    let url='http://localhost:8589/crops';
-      return this.http.get<CropDto[]>(url);
+  fetchActiveBids():Observable<activecrops>{//Active cops object
+    let url='http://localhost:8585/crops';
+      return this.http.get<activecrops>(url);
   }
   getCurrrentBid(id:number): Observable<Value>{
     let url = 'http://localhost:8585/getcurrentprice';
