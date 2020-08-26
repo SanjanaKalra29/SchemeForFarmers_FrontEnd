@@ -5,7 +5,6 @@ import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component'
 import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.component';
 import { ViewsoldhistoryComponent } from './viewsoldhistory/viewsoldhistory.component';
 import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.component';
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
