@@ -9,7 +9,7 @@ export class Address{
   
   }
  export class LandDetails{
-    area:string;
+    area:number;
     address:string;
     pincode:number;
   

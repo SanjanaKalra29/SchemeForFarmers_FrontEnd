@@ -39,7 +39,7 @@
                       </div>
 
                     <div class="d1">Address Details</div>
-                    <input class="a1" type="text" placeholder="Line 1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 1" name="addressLine1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
 
                     <div *ngIf="form1.submitted && line2.invalid">
                       <div class="error" *ngIf="email.errors.required">
@@ -47,7 +47,7 @@
                       </div>
                     </div>
 
-                    <input class="a1" type="text" placeholder="Line 2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>
+                    <input class="a1" type="text" placeholder="Line 2" name="addressLine2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>
 
                     <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=address.state #state="ngModel" ><br/>
                    
@@ -144,7 +144,7 @@
 
                         <div *ngIf="user.role=='Farmer'">
                         <div  class="d1">Land Details</div>
-                    <label for="area"><b>Area </b></label> <input class="l1" type="text" name="area" required [(ngModel)]=land.area #area="ngModel"><br/>
+                    <label for="area"><b>Area </b></label> <input class="l1" type="number" name="area" required [(ngModel)]=land.area #area="ngModel"><br/>
                    
                     <div *ngIf="form1.submitted && area.invalid">
                         <div class="error" *ngIf="area.errors.required">
@@ -159,7 +159,7 @@
                           </div>
                         </div>
 
-                    <label for="pin"><b>Pin </b></label> <input class="l3" type="text" name="pin" required pattern="[0-9]{6}"   [(ngModel)]=land.pincode #pin2="ngModel"><br/>
+                    <label for="pin"><b>Pin </b></label> <input class="l3" type="number" name="pin" required pattern="[0-9]{6}"   [(ngModel)]=land.pincode #pin2="ngModel"><br/>
           
                     <div *ngIf="form1.submitted && pin2.invalid">
                     <div class="error" *ngIf="pin2.errors.required">

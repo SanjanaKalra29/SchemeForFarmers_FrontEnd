@@ -3,6 +3,6 @@ export class registerFinal{
 
     user:User = new User();
     address:Address=new Address();
-    land: LandDetails= new LandDetails();
+    landdetails: LandDetails= new LandDetails();
     
 }
