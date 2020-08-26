@@ -1,6 +1,6 @@
 <div class="start">
   <h1 align="center">Place Sell Request</h1>
-<form #form1="ngForm">
+<form #form1="ngForm" (ngSubmit)="form1.form.valid && process()">
         <div align="center" class="container1">
             <div class="input1">
             <label  for="name"><b>Crop name :</b></label>
@@ -42,15 +42,7 @@
               </div>
               </div>
 
-            <label  for="dateAddedOn"><b>dateAddedOn :</b></label>
-            <input class="t5" name="dateAddedOn"  type="date" required [(ngModel)]=crop.dateAddedOn #dateAddedOn="ngModel"><br/>
-
-            <div *ngIf="form1.submitted && dateAddedOn.invalid">
-              <div class="error" *ngIf="dateAddedOn.errors.required">
-                DATE  is required.
-              </div>
-              </div>
-
+           
             <label  for="basePrice"><b>base Price :</b></label>
             <input class="t6" name="basePrice" placeholder=" crop name" type="number" required [(ngModel)]=crop.basePrice #basePrice="ngModel"><br/>
 
@@ -78,24 +70,14 @@
               </div>
               </div>
 
-            <label  for="status"><b>status : </b></label>
-            <input class="t9" name="status" type="text" required [(ngModel)]=crop.status #status="ngModel">
-
-            <div *ngIf="form1.submitted && status.invalid">
-              <div class="error" *ngIf="status.errors.required">
-                status is required.
-              </div>
-              </div>
-
-            </div>
 		
         <div class="input2">
           <label  for="soilPH"><b>Soil PH Certificate :</b></label>
-          <input class="t10" name="soilPH" type="text" required [(ngModel)]=crop.soilPH #soilPH="ngModel"/>
+          <input class="t10" name="soilPH" type="number" step="0.01" required [(ngModel)]=crop.soilPh #soilPh="ngModel"/>
         </div>
 
-        <div *ngIf="form1.submitted && soilPH.invalid">
-          <div class="error" *ngIf="soilPH.errors.required">
+        <div *ngIf="form1.submitted && soilPh.invalid">
+          <div class="error" *ngIf="soilPh.errors.required">
               PH required.
           </div>
           </div>
@@ -106,6 +88,7 @@
 
     
       </div>
+    </div>
 
     </form>
   </div>
