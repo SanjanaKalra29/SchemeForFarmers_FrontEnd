@@ -1,0 +1,21 @@
+body{
+    padding-top: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+.container1{
+    padding-top: 5%;
+    padding-left: 5%;
+    border:2px solid rgb(94, 255, 0);
+    height: 100%;
+    margin-bottom: 200px;
+}
+
+.card{
+   margin-bottom: 50px;
+   width:200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}

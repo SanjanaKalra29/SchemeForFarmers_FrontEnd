@@ -5,21 +5,24 @@ export class Address{
     addressLine2:string;
     state:string;
     city:string;
-    pincode:number;
+    pincode:number; 
   
   }
- export class Land{
-    area:string;
+ export class LandDetails{
+    area:number;
     address:string;
     pincode:number;
   
   }
-  export class Account{
+
+  export class User{
+    fullname: string;
+    phoneno:number;
+    role:String;
+    email:string;
+    password:string;
     accountNumber:number;
     ifscCode:string;
-  
-  }
-  export class Document{
     Aadharcard:number;
     pancard:string;
     addharfile: File;
