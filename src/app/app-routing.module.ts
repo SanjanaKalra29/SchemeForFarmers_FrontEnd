@@ -9,6 +9,8 @@ import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.comp
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path:'app-login', component:LoginComponent},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path:'app-farmer-welcome2', component:FarmerWelcome2Component},
   {path:'app-viewsoldhistory', component:ViewsoldhistoryComponent},
   {path:'app-viewmarketplace', component:ViewmarketplaceComponent},
-  {path:'app-home', component:HomeComponent}
+  {path:'app-home', component:HomeComponent},
+  {path:'app-contact-us', component:ContactUsComponent},
+  {path:'app-about', component:AboutComponent}
 ];
 
 @NgModule({
