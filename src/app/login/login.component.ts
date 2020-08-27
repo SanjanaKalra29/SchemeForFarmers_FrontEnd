@@ -23,11 +23,12 @@ loginuser(){
 
     if(data.status=="SUCCESS"){
       console.log(data.message);
-      console.log(data.userId);
+      //console.log(data.userId);
       sessionStorage.setItem('UserId',String(data.userId));
       sessionStorage.setItem('name',String(data.name));
       this.displaymessage=data.message;
       alert(data.role);
+      window.location.reload();
       if(data.role=='Bidder'){
       this.router.navigate(['/biddermarketplace']);
        }
@@ -35,7 +36,9 @@ loginuser(){
       this.router.navigate(['/app-admin']);
        }
        else if(data.role=='Farmer'){
-        this.router.navigate(['/app-farmer-welcome2']);
+        this.router.navigateByUrl('/navbar', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/app-farmer-welcome2']);
+      }); 
        }
        else{
          alert("Not a Valid response");
