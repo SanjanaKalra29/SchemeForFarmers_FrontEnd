@@ -10,9 +10,9 @@ export class SoldhistoryService {
 
   constructor(private http: HttpClient) { }
 
-  fetchAllSSoldCrops(id:number): Observable<Sold>{
+  fetchAllSoldCrops(id:number): Observable<Sold>{
     let url = 'http://localhost:8585/bid?farmerid='+id;
-    return this.http.post<Sold>(url, id);
+    return this.http.get<Sold>(url);
 
   }
 }

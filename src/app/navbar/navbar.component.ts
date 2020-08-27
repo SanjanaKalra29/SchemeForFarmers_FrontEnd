@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
+user:string;
+  constructor() { 
+    this.user=(sessionStorage.getItem('UserId')); 
+  }
   ngOnInit(): void {
   }
 

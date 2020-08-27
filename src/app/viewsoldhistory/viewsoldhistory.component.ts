@@ -1,3 +1,5 @@
+import { soldCrops } from './soldcrop';
+import { SoldhistoryService } from './../soldhistory.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsoldhistoryComponent implements OnInit {
 
-  date :Date;
+  userid:number;
+  id:number;
+  soldcrp:soldCrops[];
   name:string;
   quantity:number;
   baseprice:number;
   soldprice:number;
-  constructor() { }
+  constructor(private service:SoldhistoryService) { }
 
   ngOnInit(): void {
-  }
+this.userid=Number(sessionStorage.getItem('UserId')); 
+    this.service.fetchAllSoldCrops(this.userid).subscribe(data=>{
+      alert(JSON.stringify(data));
+      this.soldcrp = data.sold;
+  })
 
+}
 }

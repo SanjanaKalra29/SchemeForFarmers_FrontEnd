@@ -1,3 +1,4 @@
+import { Subscription, interval } from 'rxjs';
 
 import { BidderService } from './../bidder.service';
 import { Router } from '@angular/router';
@@ -20,14 +21,27 @@ export class BiddermarketplaceComponent implements OnInit {
   crop: availablecrop[];
   show:boolean=false;
   basePrice:number;
+  user:any;
+
+  private updateSubscription: Subscription;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      //alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
       this.crop = data.crops;
-     // this.baseprice=data.basePrice;
     })
+    this.user=(sessionStorage.getItem('UserId')); 
+    if(this.user!=''){
+      this.updateSubscription = interval(40000).subscribe(
+        (val) => { this.service.fetchActiveBids().subscribe(data=>{
+          alert(JSON.stringify(data));
+          this.crop = data.crops;
+        })}
+  );
+      }
+     // this.baseprice=data.basePrice;
+    
   } 
   setidBid(id:number,name:string,basePrice:number){
 
