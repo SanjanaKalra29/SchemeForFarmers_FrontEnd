@@ -1,10 +1,9 @@
-export class Notification{
+export class Notify{
     cropid:number;
     amount:number;
-    basePrice:number;
+    baseprice:number;
     cropName:String;
     quantity:number;
     farmerName:String;
-    BidderName:String;
-
+    bidderName:String;
 }

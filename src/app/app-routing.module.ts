@@ -11,6 +11,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -26,7 +28,9 @@ const routes: Routes = [
   {path:'app-about', component:AboutComponent},
   {path:'biddermarketplace', component:BiddermarketplaceComponent},
   {path:'app-contact-us',component:ContactUsComponent},
-  {path:'app-admin',component:AdminComponent}
+  {path:'app-admin',component:AdminComponent},
+  {path:'notification',component:NotificationComponent},
+  {path:'navbar',component:NavbarComponent}
 ];
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],

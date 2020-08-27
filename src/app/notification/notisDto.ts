@@ -1,6 +1,7 @@
 import { RegistrationStatus } from './../farmerregistration/RegistrationStatus';
+import { Notify } from './Notification';
 export class NotisDto{
 
-    notis:Notification[];
+    notification:Notify[];
     status:RegistrationStatus;
 }

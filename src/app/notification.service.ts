@@ -11,7 +11,7 @@ export class NotificationService {
   constructor(private http: HttpClient) { }
 
   getNotification(id:number): Observable<NotisDto>{
-    let url = 'http://localhost:8585/bid?cropid='+id;
+    let url = 'http://localhost:8585/winbids?userid='+id;
     return this.http.get<NotisDto>(url);
 
   }
