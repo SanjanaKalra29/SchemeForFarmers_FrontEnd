@@ -16,6 +16,7 @@
               <!--  <th>Current Bid</th>--> 
             </tr>
             </thead>
+            <thead class="thead-dark">
             <tr *ngFor="let c of crop">
                 
                 <td>{{c.id}}</td>
@@ -26,6 +27,7 @@
                 <td>{{c.endDate}}</td>
                 <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
             </tr>
+            </thead>
         </table>
         </div>
     </div>
@@ -42,6 +44,7 @@
                         <th>Enter your Bid Price</th>
                     </tr>
                 </thead>
+                <thead>
                     <tr>
                         <td>{{id}}</td>
                         <td>{{name}}</td>
@@ -56,6 +59,7 @@
                         </form>
                     </div>
                     </tr>
+                </thead>
                 </table>
                 </div>
 
