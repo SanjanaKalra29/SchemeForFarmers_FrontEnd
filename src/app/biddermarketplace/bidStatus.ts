@@ -3,5 +3,6 @@ export class BidStatus{
     message:String;
 }
 export class Value{
-    CurrentBid:number;
+    amount:number;
+    status:BidStatus;
 }

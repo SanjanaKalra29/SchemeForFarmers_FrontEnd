@@ -19,12 +19,15 @@ export class BidderService {
   }
   getCurrrentBid(id:number): Observable<Value>{
     let url = 'http://localhost:8585/bid?cropid='+id;
-    return this.http.post<Value>(url, id);
+    return this.http.get<Value>(url);
 
   }
 
   submitbid(live:LiveBid): Observable<BidStatus>{
-    let url = 'http://localhost:8585/submit';
+    alert(live.amount);
+    alert(live.cropid);
+    alert(live.userid);
+    let url = 'http://localhost:8585/placebids';
     return this.http.post<BidStatus>(url, live);
 
   }
