@@ -1,3 +1,5 @@
+import { AlertComponent } from './alert/alert.component';
+import { ErrorComponent } from './error/error.component';
 import { AdminComponent } from './admin/admin.component';
 import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
 import { HomeComponent } from './home/home.component';
@@ -29,7 +31,9 @@ const routes: Routes = [
   {path:'app-contact-us',component:ContactUsComponent},
   {path:'app-admin',component:AdminComponent},
   {path:'notification',component:NotificationComponent},
-  {path:'navbar',component:NavbarComponent}
+  {path:'navbar',component:NavbarComponent},
+  {path:'error',component:ErrorComponent},
+  {path:'alert',component:AlertComponent}
 ];
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],

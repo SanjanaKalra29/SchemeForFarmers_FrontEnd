@@ -17,6 +17,8 @@ import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplac
 import { AdminComponent } from './admin/admin.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NotificationComponent } from './notification/notification.component';
+import { AlertComponent } from './alert/alert.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { NotificationComponent } from './notification/notification.component';
     AdminComponent,
     LogoutComponent,
     NotificationComponent,
+    AlertComponent,
+    ErrorComponent,
   ],
 
   imports: [

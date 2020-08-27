@@ -22,13 +22,13 @@ loginuser(){
     alert(JSON.stringify(data));
 
     if(data.status=="SUCCESS"){
-      console.log(data.message);
-      //console.log(data.userId);
+      this.router.navigate(['/alert']);
+      //console.log(data.message);
       sessionStorage.setItem('UserId',String(data.userId));
       sessionStorage.setItem('name',String(data.name));
       this.displaymessage=data.message;
       alert(data.role);
-      window.location.reload();
+     // window.location.reload();
       if(data.role=='Bidder'){
       this.router.navigate(['/biddermarketplace']);
        }
