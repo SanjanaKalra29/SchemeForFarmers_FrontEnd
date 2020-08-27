@@ -17,11 +17,12 @@
             </tr>
             </thead>
             <tr *ngFor="let c of crop">
-                <td></td>
+                
                 <td>{{c.id}}</td>
                 <td>{{c.name}}</td>
                 <td>{{c.fullname}}</td>
                 <td>{{c.basePrice}}</td>
+                <td></td>
                 <td>{{c.endDate}}</td>
                 <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
             </tr>

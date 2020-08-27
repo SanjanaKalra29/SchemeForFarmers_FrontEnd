@@ -22,6 +22,7 @@ import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplac
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,9 @@ import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplac
     ViewsoldhistoryComponent,
     ViewmarketplaceComponent,
     BiddermarketplaceComponent,
+    ContactUsComponent
   ],
+
   imports: [
 
     BrowserModule,

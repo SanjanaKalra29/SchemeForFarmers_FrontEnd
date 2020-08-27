@@ -1,24 +1,12 @@
-/* .column { 
-    float: left;
-    width: 30%;
-    padding: 10px;
-  }
-.footer-color{
-   background-color: purple;
-  }*/
 
-.footerParent {
-    margin-top: 2%;
-}
-
-.foot {
-    margin-top: 2%;
-    background-color: greenyellow;
-}
-
-.footerDiv {
-    text-align: center;
-    padding: 2%;
+.footerDiv{
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
+    background-color:lightskyblue;
+    color:black;
+    text-align: center;
+    height:50px;
+    font-size:20px;
 }
