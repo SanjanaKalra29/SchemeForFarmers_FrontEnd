@@ -38,18 +38,20 @@ export class BiddermarketplaceComponent implements OnInit {
     //alert(this.id);
     this.show=!this.show; //to shoq the bid input only when the user clicks on bid
     //hit to servier to get the latest current bid
+    
    this.service.getCurrrentBid(this.id).subscribe(data=>{
     alert(JSON.stringify(data));
-    this.currbid=data.CurrentBid;
+    this.currbid=data.amount;
    })
   }
 
-  makeBid(id:number,currbid:number,livebid:number){
-
-    if(livebid>(currbid+100)&& livebid>this.basePrice){
+  makeBid(){
+    alert(this.currbid);
+    alert(this.liveprice);
+    if(this.liveprice>(this.currbid+100)&& this.liveprice>this.basePrice){
       //alert("bid succeess");
-      this.live.cropid=id;
-      this.live.amount=livebid;
+      this.live.cropid=this.id;
+      this.live.amount=this.liveprice;
       this.live.userid=Number(sessionStorage.getItem('UserId')); 
       this.service.submitbid(this.live).subscribe(data=>{
         alert(JSON.stringify(data));
@@ -58,7 +60,7 @@ export class BiddermarketplaceComponent implements OnInit {
           //Route to the market place
         }
         else{
-          alert("ERror!! Please try again");
+          alert("Error!! Please try again");
         }
       })
     }
