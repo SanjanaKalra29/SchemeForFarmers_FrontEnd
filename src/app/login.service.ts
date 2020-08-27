@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 import { login } from './login/login';
-import { Observable } from 'rxjs';
+import { Observable, of as observableOf } from 'rxjs';
 import { LoginStatus } from './login/LoginStatus';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { LoginStatus } from './login/LoginStatus';
 })
 export class LoginService {
 
+  
   constructor(private http: HttpClient) { }
 
   userLogin(logindata:login): Observable<LoginStatus>{
