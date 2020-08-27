@@ -16,12 +16,11 @@
             </thead>
             <thead class="thead-dark">
             <tr *ngFor="let c of crop">
-                <td></td>
                 <td>{{c.id}}</td>
                 <td>{{c.name}}</td>
                 <td>{{c.fullname}}</td>
                 <td>{{c.basePrice}}</td>
-                <td><Button type="submit" (click)= "setid(c.id)" class="bidbtn">Cick to View More</Button></td> <!-- this will come in if condition only if the status of crop is Active-->
+                <td><Button type="submit" (click)= "setidBid(c.id,c.name)" class="bidbtn">Cick to View More</Button></td> <!-- this will come in if condition only if the status of crop is Active-->
             </tr>
             </thead>
         </table>
@@ -30,7 +29,7 @@
     <div class="form-row">
         <div class="container"> 
                 <div>
-                    <h3 class="heading2">Your Active Bids</h3> </div>
+                    <h3 class="heading2">Bid Info</h3> </div>
                 <table class="table2">
                     <thead class="thead-dark">
                     <tr>

@@ -23,8 +23,8 @@ loginuser(){
     alert(JSON.stringify(data));
 
     if(data.status=="SUCCESS"){
-      console.log(data.message);
-      //console.log(data.userId);
+      this.router.navigate(['/alert']);
+      //console.log(data.message);
       sessionStorage.setItem('UserId',String(data.userId));
       sessionStorage.setItem('name',String(data.name));
       this.serv.broadcastLoginChange(String(data.name));

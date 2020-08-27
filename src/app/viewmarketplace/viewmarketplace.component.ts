@@ -25,19 +25,19 @@ export class ViewmarketplaceComponent implements OnInit {
   });
 }
 
-setidBid(id:number,name:string,basePrice:number){
+setidBid(id:number,name:string){
 
   this.id=id;
   this.name=name;
 
  this.service.getCurrrentBid(this.id).subscribe(data=>{
   this.currbid=data.amount;
- });
+ })
 
- this.updateSubscription = interval(1000).subscribe(
+ this.updateSubscription = interval(10000).subscribe(
   (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
     this.currbid=data.amount;
-   })
+   });
   })
 }
 }
