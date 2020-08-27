@@ -45,9 +45,13 @@
                         <td>{{id}}</td>
                         <td>{{name}}</td>
                         <td>{{currbid}}</td>
+                        
                         <ng-container *ngIf="show">
-                        <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
-                        <td><Button type="submit" onclick="makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
+                        <td><Button type="submit" onclick="makeBid()" class="btn">Make Bid</Button></td>
+                        <form (ngSubmit)="makeBid()">
+                            <input type = "number"  value =0 placeholder="Bid Amount" name="bidprice" [(ngModel)]="liveprice" >
+                            <input type="submit" value="place" id="submit">
+                        </form>
                     </ng-container>
                     </tr>
                 </table>
