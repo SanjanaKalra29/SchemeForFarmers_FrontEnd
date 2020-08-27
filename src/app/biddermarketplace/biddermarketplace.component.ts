@@ -88,7 +88,7 @@ export class BiddermarketplaceComponent implements OnInit {
     this.currbid=data.amount;
    });
 
-   this.updateSubscription = interval(1000).subscribe(
+   this.updateSubscription = interval(10000).subscribe(
     (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
      // alert(JSON.stringify(data));
       this.currbid=data.amount;

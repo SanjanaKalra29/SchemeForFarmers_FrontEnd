@@ -26,7 +26,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["https://kit.fontawesome.com/a076d05399.js",
+              "https://code.jquery.com/jquery-3.4.1.js"]
           },
           "configurations": {
             "production": {

@@ -32,13 +32,12 @@ setidBid(id:number,name:string){
 
  this.service.getCurrrentBid(this.id).subscribe(data=>{
   this.currbid=data.amount;
-  alert(this.currbid);
  })
 
  this.updateSubscription = interval(10000).subscribe(
   (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
     this.currbid=data.amount;
-   })
+   });
   })
 }
 }
