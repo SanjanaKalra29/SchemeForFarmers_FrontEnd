@@ -1,5 +1,5 @@
+import { FarmermarketService } from './../farmermarket.service';
 import { availablecrop } from './../biddermarketplace/availablecrop';
-import { Crop } from './../crop/crop';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewmarketplaceComponent implements OnInit {
 
-  id:number;
+  userid:number;
   name:string;
   currbid:number;
   crop: availablecrop[];
-  constructor() { }
+  constructor(private service:FarmermarketService) { }
 
   ngOnInit(): void {
-  }
+    this.userid=Number(sessionStorage.getItem('UserId')); 
+    this.service.fetchAllCrops(this.userid).subscribe(data=>{
+      alert(JSON.stringify(data));
+     // this.soldcrp = data.sold;
+  })
 
+}
 }

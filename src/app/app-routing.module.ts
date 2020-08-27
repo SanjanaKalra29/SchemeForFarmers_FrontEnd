@@ -1,9 +1,9 @@
+import { AdminComponent } from './admin/admin.component';
 import { BiddermarketplaceComponent } from './biddermarketplace/biddermarketplace.component';
 import { HomeComponent } from './home/home.component';
 import { CropComponent } from './crop/crop.component';
 import { LoginComponent } from './login/login.component';
 import { FarmerregistrationComponent } from './farmerregistration/farmerregistration.component';
-import { BidderwelcomeComponent } from './bidderwelcome/bidderWelcome.component';
 import { FarmerWelcome2Component } from './farmer-welcome2/farmer-welcome2.component';
 import { ViewsoldhistoryComponent } from './viewsoldhistory/viewsoldhistory.component';
 import { ViewmarketplaceComponent } from './viewmarketplace/viewmarketplace.component';
@@ -11,13 +11,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'app-login', component:LoginComponent},
   {path:'farmerregistration', component: FarmerregistrationComponent},
   {path:'crop', component: CropComponent},
-  {path:'bidderwelcome', component:BidderwelcomeComponent},
   {path:'app-farmer-welcome2', component:FarmerWelcome2Component},
   {path:'app-viewsoldhistory', component:ViewsoldhistoryComponent},
   {path:'app-viewmarketplace', component:ViewmarketplaceComponent},
@@ -26,7 +27,9 @@ const routes: Routes = [
   {path:'app-about', component:AboutComponent},
   {path:'biddermarketplace', component:BiddermarketplaceComponent},
   {path:'app-contact-us',component:ContactUsComponent},
-
+  {path:'app-admin',component:AdminComponent},
+  {path:'notification',component:NotificationComponent},
+  {path:'navbar',component:NavbarComponent}
 ];
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],

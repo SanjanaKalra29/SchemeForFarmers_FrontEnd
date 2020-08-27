@@ -5,7 +5,8 @@
     <a [routerLink]="'app-contact-us'">Contact</a>
     <a [routerLink]="'app-about'">About</a>
     <a [routerLink]="'/app-login'">Login</a>
-    <div class ="right">
-    
+    <div class ="right" *ngIf="user!=null">
+    <a  [routerLink]="'/Notification'">Notification</a>
+    <a  href="#" (click)="Logout()">Logout</a>
 </div>
 </div>

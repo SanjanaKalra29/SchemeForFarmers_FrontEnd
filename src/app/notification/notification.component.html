@@ -1,0 +1,24 @@
+
+<div>
+    <table>
+        <tr>
+            <th>Crop Id</th>
+            <th>Selling amount</th>
+            <th>Base Price</th>
+            <th>crop name</th>
+            <th>Quantity</th>
+            <th>farmerName</th>
+            <th>BidderName</th>
+        </tr>
+        <tr *ngFor="let n of notifications">
+            <td></td>
+            <td>{{n.cropid}}</td>
+            <td>{{n.amount}}</td>
+            <td>{{n.baseprice}}</td>
+            <td>{{n.cropName}}</td>
+            <td>{{n.quantity}}</td>
+            <td>{{n.farmerName}}</td>
+            <td>{{n.bidderName}}</td>
+        </tr>
+    </table>
+</div>

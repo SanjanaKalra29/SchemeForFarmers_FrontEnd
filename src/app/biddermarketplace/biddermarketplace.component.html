@@ -22,7 +22,7 @@
                 <td>{{c.name}}</td>
                 <td>{{c.fullname}}</td>
                 <td>{{c.basePrice}}</td>
-                <td></td>
+                <td>{{c.currbid}}</td>
                 <td>{{c.endDate}}</td>
                 <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
             </tr>
@@ -47,13 +47,14 @@
                         <td>{{name}}</td>
                         <td>{{currbid}}</td>
                         
-                        <ng-container *ngIf="show">
-                        <td><Button type="submit" onclick="makeBid()" class="btn">Make Bid</Button></td>
+                        <div *ngIf="show">
+                        <!--<td><Button type="submit" onclick="makeBid()" class="btn">Make Bid</Button></td>-->
                         <form (ngSubmit)="makeBid()">
                             <input type = "number"  value =0 placeholder="Bid Amount" name="bidprice" [(ngModel)]="liveprice" >
                             <input type="submit" value="place" id="submit">
+                            <h5>*Enter bid 100 greater than the current bid </h5>
                         </form>
-                    </ng-container>
+                    </div>
                     </tr>
                 </table>
                 </div>
