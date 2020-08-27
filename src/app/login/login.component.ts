@@ -25,13 +25,20 @@ loginuser(){
       console.log(data.message);
       console.log(data.userId);
       sessionStorage.setItem('UserId',String(data.userId));
+      sessionStorage.setItem('name',String(data.name));
       this.displaymessage=data.message;
       alert(data.role);
       if(data.role=='Bidder'){
       this.router.navigate(['/biddermarketplace']);
        }
-    else{
-      this.router.navigate(['/app-farmer-welcome2']);
+    else if(data.role=='Admin'){
+      this.router.navigate(['/app-admin']);
+       }
+       else if(data.role=='Farmer'){
+        this.router.navigate(['/app-farmer-welcome2']);
+       }
+       else{
+         alert("Not a Valid response");
        }
     }
     else{

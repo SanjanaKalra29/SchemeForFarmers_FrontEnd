@@ -4,7 +4,7 @@
     <a [routerLink]="'app-contact-us'">Contact</a>
     <a [routerLink]="'app-about'">About</a>
     <a [routerLink]="'/app-login'">Login</a>
-    <div class ="right">
+    <div *ngIf="user!=''" class ="right">
     <a  [routerLink]="'/app-login'">Logout</a>
 </div>
 </div>
