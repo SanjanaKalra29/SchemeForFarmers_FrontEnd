@@ -1,4 +1,4 @@
-import { Subscription, interval } from 'rxjs';
+import { Subscription, interval, timer } from 'rxjs';
 
 import { BidderService } from './../bidder.service';
 import { Router } from '@angular/router';
@@ -22,27 +22,58 @@ export class BiddermarketplaceComponent implements OnInit {
   show:boolean=false;
   basePrice:number;
   user:any;
-
+  cropids:number[]=[];
+  currentbids:number[]=[];
   private updateSubscription: Subscription;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
 
     this.service.fetchActiveBids().subscribe(data=>{
-      alert(JSON.stringify(data));
+   // alert(JSON.stringify(data));
       this.crop = data.crops;
-    })
+/*
+      for(var i in data.crops){
+        this.cropids[i]=data.crops[i].id;
+        //alert(this.cropids[i]);    
+  }
+//alert(this.cropids[0]);
+      data.crops.forEach(element => {
+        alert(element.id);
+        this.cropids[0]==element.id;
+        alert(this.cropids[0]);
+        this.cropids.push(element.id);
+
+    })*/
+
+
+      
+    });
+/*
     this.user=(sessionStorage.getItem('UserId')); 
-    if(this.user!=''){
-      this.updateSubscription = interval(40000).subscribe(
-        (val) => { this.service.fetchActiveBids().subscribe(data=>{
-          alert(JSON.stringify(data));
-          this.crop = data.crops;
-        })}
+      this.updateSubscription = interval(2000).subscribe(
+        (val) => { {  //for(var i in this.cropids)
+         // this.service.getCurrrentBid(this.cropids[i]).subscribe(data=>{
+            //alert(JSON.stringify(data));
+        
+            //this.currentbids[i]=(data.amount); 
+           //alert(this.currentbids[0])
+          // })
+               
+          /* function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
+          async function delayedGreeting() {
+            await sleep(100);
+          }
+          delayedGreeting(); 
+        } }
+        
   );
-      }
-     // this.baseprice=data.basePrice;
     
+  */
   } 
+  
+
   setidBid(id:number,name:string,basePrice:number){
 
     this.id=id;
@@ -54,10 +85,17 @@ export class BiddermarketplaceComponent implements OnInit {
     //hit to servier to get the latest current bid
     
    this.service.getCurrrentBid(this.id).subscribe(data=>{
-    alert(JSON.stringify(data));
+   // alert(JSON.stringify(data));
     this.currbid=data.amount;
-   })
-  }
+   });
+
+   this.updateSubscription = interval(1000).subscribe(
+    (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
+     // alert(JSON.stringify(data));
+      this.currbid=data.amount;
+     });
+    })
+}
 
   makeBid(){
     alert(this.currbid);

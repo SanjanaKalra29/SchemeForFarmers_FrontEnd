@@ -12,8 +12,8 @@
                 <th>Crop Name</th>
                 <th>Farmer Name</th>
                 <th>Base Price</th>
-                <th>Current Bid</th>
                 <th>Closing Date</th>
+              <!--  <th>Current Bid</th>--> 
             </tr>
             </thead>
             <tr *ngFor="let c of crop">
@@ -22,7 +22,7 @@
                 <td>{{c.name}}</td>
                 <td>{{c.fullname}}</td>
                 <td>{{c.basePrice}}</td>
-                <td>{{c.currbid}}</td>
+             <!--  <td>{{c.currbid}}</td> --> 
                 <td>{{c.endDate}}</td>
                 <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
             </tr>
@@ -60,4 +60,5 @@
                 </div>
 
     </div>
+
 </div>
