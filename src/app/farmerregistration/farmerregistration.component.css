@@ -1,21 +1,14 @@
 .row{
+    background-image: url('../../assets/homeImages/logo.jpg');
 	margin:20px;
-    margin-top:50px;
+    margin-top:5px;
     margin-bottom:50px;
 	margin-right:100px;
 	margin-left:170px;
-	background-color: white;
-	border-style:solid;
-	border-color:#0080109e;
 	height:auto;
     width:1000px;
     padding-bottom: 30px;
 }
-table{
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid black;
-  }
   
   input{
       border: 2px solid green;	
@@ -138,7 +131,7 @@ table{
   .show {display: block;}
   
   .error{
-      color: red;
+      color: rgb(255, 0, 0);
   }
   .roles{
     margin-top:30px;

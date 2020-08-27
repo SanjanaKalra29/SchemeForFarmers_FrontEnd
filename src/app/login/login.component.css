@@ -4,7 +4,12 @@ label{
     display: inline-block;
 }
 
+.main{
+
+	background-image: url('../../assets/homeImages/farmer(2).jpg');
+}
 #form{
+	
 	/* display: flex; */
 	justify-content: center;
 	padding-top: 5%;
@@ -39,7 +44,7 @@ input[type=email], input[type=password] {
   }
   
   input[type=submit] {
-	background-color: #4CAF50;
+	background-color:rgba(41, 128, 0, 0.836);
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;

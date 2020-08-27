@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:'app-farmer-welcome2', component:FarmerWelcome2Component},
   {path:'app-viewsoldhistory', component:ViewsoldhistoryComponent},
   {path:'app-viewmarketplace', component:ViewmarketplaceComponent},
-  
   {path:'app-home', component:HomeComponent},
   {path:'app-contact-us', component:ContactUsComponent},
   {path:'app-about', component:AboutComponent},

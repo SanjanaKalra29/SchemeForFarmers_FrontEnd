@@ -1,7 +1,6 @@
 <div class="row">
     <div class="main">
         <div class="card">
-            
             <form #form1="ngForm" (ngSubmit)="form1.form.valid && process()">
                 <div class="container">
                     <h1>Personal Details</h1>
@@ -127,8 +126,9 @@
                        
                         <div *ngIf="form1.submitted && pass.invalid">
                             <div class="error" *ngIf="pass.errors.required">
-                                Enter PassWord.
+                                Enter Password.
                               </div>
+                              
                               <div class="error" *ngIf="pass.errors.minlength">
                                 Minimun length of Password is 8
                               </div>

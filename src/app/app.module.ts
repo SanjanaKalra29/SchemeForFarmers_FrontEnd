@@ -34,6 +34,7 @@ import { NotificationComponent } from './notification/notification.component';
     LogoutComponent,
     NotificationComponent,
   ],
+
   imports: [
 
     BrowserModule,

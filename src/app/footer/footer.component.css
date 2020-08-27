@@ -1,22 +1,12 @@
-.footerParent {
-   margin-top: 2%;
-    width:100%;
-    padding-left: 0px;
-    padding-right: 0px;
 
-}
-
-.foot {
-    margin-top: 2%;
-    background-color: greenyellow;
-    width: 100%;
-
-}
-
-.footerDiv {
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
+.footerDiv{
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
+    background-color:lightskyblue;
+    color:black;
+    text-align: center;
+    height:50px;
+    font-size:20px;
 }
