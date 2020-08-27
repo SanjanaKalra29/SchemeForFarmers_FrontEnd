@@ -18,7 +18,7 @@ export class BiddermarketplaceComponent implements OnInit {
   currbid:number;
   liveprice:number;
   crop: availablecrop[];
-  show:boolean=true;
+  show:boolean=false;
   basePrice:number;
  constructor(private service:BidderService,private router: Router) {}
   ngOnInit(): void {
