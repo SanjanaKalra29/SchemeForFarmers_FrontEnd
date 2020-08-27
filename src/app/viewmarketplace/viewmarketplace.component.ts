@@ -1,6 +1,8 @@
-import { FarmermarketService } from './../farmermarket.service';
+import { interval, Subscription } from 'rxjs';
+import { BidderService } from './../bidder.service';
 import { availablecrop } from './../biddermarketplace/availablecrop';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewmarketplace',
@@ -9,18 +11,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewmarketplaceComponent implements OnInit {
 
-  userid:number;
+  id:number;
   name:string;
   currbid:number;
   crop: availablecrop[];
-  constructor(private service:FarmermarketService) { }
+  private updateSubscription: Subscription;
+
+  constructor(private service:BidderService,private router: Router) { }
 
   ngOnInit(): void {
-    this.userid=Number(sessionStorage.getItem('UserId')); 
-    this.service.fetchAllCrops(this.userid).subscribe(data=>{
-      alert(JSON.stringify(data));
-     // this.soldcrp = data.sold;
-  })
+    this.service.fetchActiveBids().subscribe(data=>{
+         this.crop = data.crops;
+  });
+}
 
+setidBid(id:number,name:string,basePrice:number){
+
+  this.id=id;
+  this.name=name;
+
+ this.service.getCurrrentBid(this.id).subscribe(data=>{
+  this.currbid=data.amount;
+ });
+
+ this.updateSubscription = interval(1000).subscribe(
+  (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
+    this.currbid=data.amount;
+   })
+  })
 }
 }

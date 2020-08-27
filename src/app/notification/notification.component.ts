@@ -22,8 +22,6 @@ export class NotificationComponent implements OnInit {
   }
 
 getNotice(){
-  
-
   }
 }
 

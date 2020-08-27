@@ -1,5 +1,6 @@
-import { soldCrops } from './soldcrop';
-import { SoldhistoryService } from './../soldhistory.service';
+import { RouterModule, Router } from '@angular/router';
+import { NotificationService } from './../notification.service';
+import { Notify } from './../notification/Notification';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,21 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewsoldhistoryComponent implements OnInit {
 
-  userid:number;
   id:number;
-  soldcrp:soldCrops[];
-  name:string;
-  quantity:number;
-  baseprice:number;
-  soldprice:number;
-  constructor(private service:SoldhistoryService) { }
-
+  notifications : Notify[];
+  constructor(private service:NotificationService,private router: Router) { }
   ngOnInit(): void {
-this.userid=Number(sessionStorage.getItem('UserId')); 
-    this.service.fetchAllSoldCrops(this.userid).subscribe(data=>{
-      alert(JSON.stringify(data));
-      this.soldcrp = data.sold;
-  })
+    this.id=Number(sessionStorage.getItem('UserId')); 
+  this.service.getNotification(this.id).subscribe(data=>{
+    this.notifications=data.notification;
+    alert(JSON.stringify(data));
+   })
+  }
 
-}
 }

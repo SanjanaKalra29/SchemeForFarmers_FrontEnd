@@ -15,13 +15,13 @@
                 <th>Sold Price</th>
             </tr>
             </thead>
-            <tr *ngFor="">  
+            <tr *ngFor="let n of notifications">  
                 <td></td>
-                <td>{{id}}</td>
-                <td>{{name}}</td>
-                <td>{{quantity}}</td>
-                <td>{{baseprice}}</td>
-                <td>{{soldprice}}</td>
+                <td>{{n.cropid}}</td>
+                <td>{{n.cropname}}</td>
+                <td>{{n.quantity}}</td>
+                <td>{{n.baseprice}}</td>
+                <td>{{n.amount}}</td>
             </tr>
         </table>
         </div>
