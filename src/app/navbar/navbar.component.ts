@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, of as observableOf } from 'rxjs';
 import { SharedService } from '../shared.service';
 
 @Component({
