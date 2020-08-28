@@ -28,10 +28,12 @@
   /* Add a color to the active/current link */
   
   .right{
-    color: black;
+    color: white;
     float:right;
-  }
+    font-size: 17px;
 
+    
+  }
   img{
     float:left;
   }

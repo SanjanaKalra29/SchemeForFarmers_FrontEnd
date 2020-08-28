@@ -17,7 +17,7 @@ export class ViewsoldhistoryComponent implements OnInit {
     this.id=Number(sessionStorage.getItem('UserId')); 
   this.service.getNotification(this.id).subscribe(data=>{
     this.notifications=data.notification;
-    alert(JSON.stringify(data));
+   // alert(JSON.stringify(data));
    })
   }
 

@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 Logout() {
    
     sessionStorage.removeItem('UserId');
-    this.router.navigate(['']);
+    this.router.navigate(['/app-login']);
     window.location.reload();
   }
 

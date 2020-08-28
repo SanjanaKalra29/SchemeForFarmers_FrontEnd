@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 loginuser(){
   this.service.userLogin(this.login).subscribe(data=>{
-    alert(JSON.stringify(data));
+   // alert(JSON.stringify(data));
 
     if(data.status=="SUCCESS"){
       this.router.navigate(['/alert']);
@@ -31,19 +31,19 @@ loginuser(){
       sessionStorage.setItem('userRole',String(data.role));
       //
       this.displaymessage=data.message;
-      alert(data.role);
+      //alert(data.role);
       if(data.role=='Bidder'){
-     
+     alert("Welcome Bidder");
       this.router.navigate(['/biddermarketplace']);
 
        }
     else if(data.role=='Admin'){
-  
+      alert("Welcome Admin");
       this.router.navigate(['/app-admin']);
       
        }
        else if(data.role=='Farmer'){
-  
+        alert("Welcome Farmer");
           this.router.navigate(['/app-farmer-welcome2']); 
          
        }

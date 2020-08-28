@@ -56,14 +56,14 @@ export class FarmerregistrationComponent {
     this.regfinal.landdetails = this.land;
 
     if(this.user.role=='Farmer'){
-      alert(JSON.stringify(this.regfinal));
+      //alert(JSON.stringify(this.regfinal));
       this.service.userRegister(this.regfinal).subscribe(data=>{ 
 
         alert(JSON.stringify(data));
         if(data.status=="SUCCESS"){
           //route to bidder welcome
           alert("Registeration Successfull")
-          this.router.navigate(['']);
+          this.router.navigate(['/app-login']);
         
         }else{
           //registration fail
@@ -76,15 +76,15 @@ export class FarmerregistrationComponent {
       this.bidder.address=this.address;
       this.bidder.user=this.user;
       
-      alert(JSON.stringify(this.bidder));
+     // alert(JSON.stringify(this.bidder));
       this.service. bidderRegister(this.bidder).subscribe(data=>{
 
       
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
         console.log(data.status);
         if(data.status =="SUCCESS"){
           //route to farmer welcome
-          this.router.navigate(['/app-farmer-welcome2']);
+         this.router.navigate(['/app-login']);
         }else{
           //registration fail
           alert("Registration Fail")

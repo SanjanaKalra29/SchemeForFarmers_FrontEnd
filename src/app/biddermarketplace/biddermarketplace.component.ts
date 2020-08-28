@@ -34,7 +34,6 @@ export class BiddermarketplaceComponent implements OnInit {
     });
 
   } 
-  
 
   setidBid(id:number,name:string,basePrice:number){
 
@@ -51,7 +50,7 @@ export class BiddermarketplaceComponent implements OnInit {
     this.currbid=data.amount;
    });
 
-   this.updateSubscription = interval(10000).subscribe(
+   this.updateSubscription = interval(3000).subscribe(
     (val) => {  this.service.getCurrrentBid(this.id).subscribe(data=>{
      // alert(JSON.stringify(data));
       this.currbid=data.amount;
@@ -68,7 +67,7 @@ export class BiddermarketplaceComponent implements OnInit {
       this.live.amount=this.liveprice;
       this.live.userid=Number(sessionStorage.getItem('UserId')); 
       this.service.submitbid(this.live).subscribe(data=>{
-        alert(JSON.stringify(data));
+       // alert(JSON.stringify(data));
         if(data.status =="SUCCESS"){
           alert("Congrats Bid successfull");
           //Route to the market place
