@@ -30,46 +30,9 @@ export class BiddermarketplaceComponent implements OnInit {
 
     this.service.fetchActiveBids().subscribe(data=>{
       this.crop = data.crops;
-/*
-      for(var i in data.crops){
-        this.cropids[i]=data.crops[i].id;
-        //alert(this.cropids[i]);    
-  }
-//alert(this.cropids[0]);
-      data.crops.forEach(element => {
-        alert(element.id);
-        this.cropids[0]==element.id;
-        alert(this.cropids[0]);
-        this.cropids.push(element.id);
-
-    })*/
-
-
       
     });
-/*
-    this.user=(sessionStorage.getItem('UserId')); 
-      this.updateSubscription = interval(2000).subscribe(
-        (val) => { {  //for(var i in this.cropids)
-         // this.service.getCurrrentBid(this.cropids[i]).subscribe(data=>{
-            //alert(JSON.stringify(data));
-        
-            //this.currentbids[i]=(data.amount); 
-           //alert(this.currentbids[0])
-          // })
-               
-          /* function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-          }
-          async function delayedGreeting() {
-            await sleep(100);
-          }
-          delayedGreeting(); 
-        } }
-        
-  );
-    
-  */
+
   } 
   
 

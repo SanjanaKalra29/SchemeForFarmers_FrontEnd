@@ -28,6 +28,7 @@ loginuser(){
       sessionStorage.setItem('UserId',String(data.userId));
       sessionStorage.setItem('name',String(data.name));
       this.serv.broadcastLoginChange(String(data.name));
+      sessionStorage.setItem('userRole',String(data.role));
       //
       this.displaymessage=data.message;
       alert(data.role);
