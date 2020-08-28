@@ -1,3 +1,5 @@
+import { RegistrationStatus } from './../farmerregistration/RegistrationStatus';
+import { NotificationService } from './../notification.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+ status:RegistrationStatus;
+  constructor(private service:NotificationService,private router) { }
 
   ngOnInit(): void {
   }
-
+  getNotice(){
+    this.service.getNotifiy().subscribe(data=>{ 
+      alert(data.message);
+     })
+  }
 }

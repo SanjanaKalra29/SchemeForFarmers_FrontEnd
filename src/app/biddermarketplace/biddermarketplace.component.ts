@@ -80,7 +80,5 @@ export class BiddermarketplaceComponent implements OnInit {
     else{
       alert("Enter a proper bid value")
     }
-
   }
- 
 }

@@ -22,8 +22,5 @@ export class NotificationComponent implements OnInit {
     this.role=sessionStorage.getItem("userRole")
    })
   }
-  
-getNotice(){
-  }
 }
 

@@ -59,7 +59,7 @@ export class FarmerregistrationComponent {
       //alert(JSON.stringify(this.regfinal));
       this.service.userRegister(this.regfinal).subscribe(data=>{ 
 
-        alert(JSON.stringify(data));
+       // alert(JSON.stringify(data));
         if(data.status=="SUCCESS"){
           //route to bidder welcome
           alert("Registeration Successfull")

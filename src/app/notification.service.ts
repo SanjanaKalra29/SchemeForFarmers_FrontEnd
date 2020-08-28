@@ -1,3 +1,4 @@
+import { RegistrationStatus } from './farmerregistration/RegistrationStatus';
 import { NotisDto } from './notification/notisDto';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -14,5 +15,9 @@ export class NotificationService {
     let url = 'http://localhost:8585/winbids?userid='+id;
     return this.http.get<NotisDto>(url);
 
+  }
+  getNotifiy(): Observable<RegistrationStatus>{
+    let url = 'http://localhost:8585/winbid';
+    return this.http.get<RegistrationStatus>(url);
   }
 }
