@@ -33,7 +33,8 @@ const routes: Routes = [
   {path:'notification',component:NotificationComponent},
   {path:'navbar',component:NavbarComponent},
   {path:'error',component:ErrorComponent},
-  {path:'alert',component:AlertComponent}
+  {path:'alert',component:AlertComponent},
+  {path:'Notification',component:NotificationComponent}
 ];
 @NgModule({ 
   imports: [RouterModule.forRoot(routes)],
