@@ -23,11 +23,13 @@
     </table>
 </div>
 -->
-<div class="Container">
-    <div *ngFor="let n of notifications">
+<div class="Notice">
+<div *ngFor="let n of notifications">
+    <div class="Container">
     <span class="fa fa-bell"></span>
     <span class="msg">{{n.farmerName}} sold his {{n.quantity}} kilos of 
         {{n.cropName}} whose base price was {{n.baseprice}} 
-        to {{bidder.name}} for {{n.amount}} </span>   
+        to {{n.biddername}} for {{n.amount}} </span>   
+</div>
 </div>
 </div>
