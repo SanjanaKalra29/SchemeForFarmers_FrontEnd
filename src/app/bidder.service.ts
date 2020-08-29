@@ -24,9 +24,9 @@ export class BidderService {
   }
 
   submitbid(live:LiveBid): Observable<BidStatus>{
-    alert(live.amount);
-    alert(live.cropid);
-    alert(live.userid);
+    // alert(live.amount);
+    // alert(live.cropid);
+    // alert(live.userid);
     let url = 'http://localhost:8585/placebids';
     return this.http.post<BidStatus>(url, live);
 
